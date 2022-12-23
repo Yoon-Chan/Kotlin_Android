@@ -8,3 +8,15 @@ __실행 화면 결과__
 
 <img width="200" alt="1" src="https://user-images.githubusercontent.com/56026214/209336221-7610cffd-9e1a-4077-accd-aa649af728ab.png">
 
+---
+
+## ch7 실습(레이아웃)
+
+간단한 화면 예제이다. 전화번호를 레이아웃을 이용하여 만들었다
+
+__실행 화면 결과__
+
+<img width="200" alt="1" src="https://user-images.githubusercontent.com/56026214/209382968-1412658c-9a39-4d92-8c4a-871118d902df.png">
+
+
+
