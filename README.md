@@ -1,10 +1,3 @@
-# Kotlin_Android
+# Kotlin 안드로이드 실습
 
-## ch6 실습
----
-간단한 화면 예제이다. xml으로만 꾸몄기 때문에 기능은 아무것도 없다.
-
-__실행 화면 결과__
-
-<img width="200" alt="1" src="https://user-images.githubusercontent.com/56026214/209336221-7610cffd-9e1a-4077-accd-aa649af728ab.png">
-
+1. Do it 깡샘의 안드로이드 앱 프로그래밍 with 코틀린 개정 Android12 적용 
