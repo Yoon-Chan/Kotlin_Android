@@ -43,3 +43,14 @@ __실행 결과__
 |시작화면 - 세로| 시작화면 - 가로| 영어권 - 세로| 영어권 - 가로|
 |:--:| :--: | :--: | :--: |
 |<img width="394" alt="1" src="https://user-images.githubusercontent.com/56026214/209402817-83e83684-3eaa-4d44-b5cb-a3c8a0dba8f4.png"> | <img width="600" height ="300" alt="2" src="https://user-images.githubusercontent.com/56026214/209402825-209708e7-e940-461a-833a-c796711ac6b1.png">| <img width="392" alt="3" src="https://user-images.githubusercontent.com/56026214/209402837-c0fe6053-ed22-4071-a6f6-d56a066924a9.png">|<img width="600" height ="300" alt="4" src="https://user-images.githubusercontent.com/56026214/209402847-3d9641e5-1506-41df-9428-4fc8cdce504b.png">|
+
+
+---
+
+## ch10 실습(알림사용)
+
+카카오톡 알림 실습 예제
+
+|시작 화면| 버튼 누른 후 알림 | 답장 누름 | 답장 보내기|
+| :--: | :--: | :--: | :--: |
+|<img width="400" alt="1" src="https://user-images.githubusercontent.com/56026214/209445834-f9ffb652-b592-42e7-8d56-375421cbafa3.png">|<img width="400" alt="2" src="https://user-images.githubusercontent.com/56026214/209445836-fe777df9-0147-46de-aeb6-bf446021d406.png">|<img width="400" alt="3" src="https://user-images.githubusercontent.com/56026214/209445840-0edbf731-b58b-49e7-bff3-a26de41d66bb.png">|<img width="400" alt="4" src="https://user-images.githubusercontent.com/56026214/209445848-7cb5f36e-9b74-4c2f-b79f-f6fa40dc2471.png">|
