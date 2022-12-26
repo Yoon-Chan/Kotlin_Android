@@ -89,7 +89,7 @@ __실행 결과__
 
 |                    x검색 버튼을 누른 경우                    |
 | :----------------------------------------------------------: |
-| <img width="400" alt="1" src="[https://user-images.githubusercontent.com/56026214/209445834-f9ffb652-b592-42e7-8d56-375421cbafa3.png](https://user-images.githubusercontent.com/56026214/209552464-d92dabfc-af57-4095-8768-d6d7aab7477d.png)"> |
+|  ![6](https://user-images.githubusercontent.com/56026214/209552968-dc0f6987-e321-4d78-a23c-80dadf757ad8.png) |
 
 검색 창이 열리며 검색이 가능하다. 
 
