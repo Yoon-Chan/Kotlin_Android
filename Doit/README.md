@@ -54,3 +54,44 @@ __실행 결과__
 |시작 화면| 버튼 누른 후 알림 | 답장 누름 | 답장 보내기|
 | :--: | :--: | :--: | :--: |
 |<img width="400" alt="1" src="https://user-images.githubusercontent.com/56026214/209445834-f9ffb652-b592-42e7-8d56-375421cbafa3.png">|<img width="400" alt="2" src="https://user-images.githubusercontent.com/56026214/209445836-fe777df9-0147-46de-aeb6-bf446021d406.png">|<img width="400" alt="3" src="https://user-images.githubusercontent.com/56026214/209445840-0edbf731-b58b-49e7-bff3-a26de41d66bb.png">|<img width="400" alt="4" src="https://user-images.githubusercontent.com/56026214/209445848-7cb5f36e-9b74-4c2f-b79f-f6fa40dc2471.png">|
+
+
+
+---
+
+## Ch11 실습(jetpack 사용해보기)
+
+
+
+제트팩의 여러 기능들을 사용하여 앱을 만든다.
+
+
+
+메인화면에서 스와이프 기능으로 프래그먼트를 이동할 수 있게 한다.
+
+|                          메인 화면                           |                         플레그먼트2                          |                         플레그먼트 3                         |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215726935.png" alt="image-20221226215726935" style="zoom: 25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215757727.png" alt="image-20221226215757727" style="zoom:25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215812171.png" alt="image-20221226215812171" style="zoom:25%;" /> |
+
+
+
+툴바에 있는 메뉴화면(햄버거 모양)을 누르면 drawer 기능을 사용할 수 있다.
+
+|                     햄버거 모양 누를 시                      |                     drawer 밖을 누를 시                      |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220041343.png" alt="image-20221226220041343" style="zoom:25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220053956.png" alt="image-20221226220053956" style="zoom:25%;" /> |
+
+ 햄버거 모양을 누르지 않고 스와이프를 누른채로 옆을 당기면 drawer를 꺼낼 수 있다.
+
+
+
+툴바에 있는 검색기능을 사용하는 경우
+
+|                    x검색 버튼을 누른 경우                    |
+| :----------------------------------------------------------: |
+| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220226318.png" alt="image-20221226220226318" style="zoom:25%;" /> |
+
+검색 창이 열리며 검색이 가능하다. 
+
+
+
