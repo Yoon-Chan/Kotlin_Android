@@ -107,7 +107,7 @@ __실행 결과__
 
 | 시작 화면 | 해당 탭을 눌렀을 때 | 아래쪽으로 내렸을 때 | drawer를 눌렀을 때 |
 | :-------: | :-----------------: | :------------------: | :----------------: |
-|     1     |          2          |          3           |         4          |
+|     <img width="395" alt="1" src="https://user-images.githubusercontent.com/56026214/209562533-0bb83604-b93a-4150-882b-7cbd529861ff.png">    |          <img width="396" alt="2" src="https://user-images.githubusercontent.com/56026214/209562544-603f517d-65ef-4fa0-b8b5-c20c824cfb38.png">   |          <img width="765" alt="3" src="https://user-images.githubusercontent.com/56026214/209562553-dabe36e2-3910-4c58-b47a-99d82d412689.png">       |         <img width="398" alt="4" src="https://user-images.githubusercontent.com/56026214/209562560-5560d32b-d387-457a-995b-d14516294a4f.png">        |
 
 
 
