@@ -79,8 +79,7 @@ __실행 결과__
 
 |                     햄버거 모양 누를 시                      |                     drawer 밖을 누를 시                      |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| ![4](https://user-images.githubusercontent.com/56026214/209552437-6d56d15b-84c2-4d8d-8921-a973c1a7cbb6.png)
-|![5](https://user-images.githubusercontent.com/56026214/209552453-b1b2e75e-9abe-4753-8293-f7bcca52a8e3.png)|
+| ![4](https://user-images.githubusercontent.com/56026214/209552437-6d56d15b-84c2-4d8d-8921-a973c1a7cbb6.png)|![5](https://user-images.githubusercontent.com/56026214/209552453-b1b2e75e-9abe-4753-8293-f7bcca52a8e3.png)|
 
  햄버거 모양을 누르지 않고 스와이프를 누른채로 옆을 당기면 drawer를 꺼낼 수 있다.
 
@@ -90,7 +89,7 @@ __실행 결과__
 
 |                    x검색 버튼을 누른 경우                    |
 | :----------------------------------------------------------: |
-| ![6](https://user-images.githubusercontent.com/56026214/209552464-d92dabfc-af57-4095-8768-d6d7aab7477d.png) |
+| <img width="400" alt="1" src="[https://user-images.githubusercontent.com/56026214/209445834-f9ffb652-b592-42e7-8d56-375421cbafa3.png](https://user-images.githubusercontent.com/56026214/209552464-d92dabfc-af57-4095-8768-d6d7aab7477d.png)"> |
 
 검색 창이 열리며 검색이 가능하다. 
 
