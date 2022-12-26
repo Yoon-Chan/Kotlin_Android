@@ -71,7 +71,7 @@ __실행 결과__
 
 |                          메인 화면                           |                         플레그먼트2                          |                         플레그먼트 3                         |
 | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215726935.png" alt="image-20221226215726935" style="zoom: 25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215757727.png" alt="image-20221226215757727" style="zoom:25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226215812171.png" alt="image-20221226215812171" style="zoom:25%;" /> |
+|![1](https://user-images.githubusercontent.com/56026214/209552397-3bccb79d-bb9d-4de3-8a54-67fbfb618b45.png)| ![2](https://user-images.githubusercontent.com/56026214/209552413-6fb79aab-fbb3-4f68-a1bf-01f33926280d.png) |![3](https://user-images.githubusercontent.com/56026214/209552414-af4988a9-fcc6-4091-9725-207f5ccd3ce3.png) |
 
 
 
@@ -79,7 +79,8 @@ __실행 결과__
 
 |                     햄버거 모양 누를 시                      |                     drawer 밖을 누를 시                      |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220041343.png" alt="image-20221226220041343" style="zoom:25%;" /> | <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220053956.png" alt="image-20221226220053956" style="zoom:25%;" /> |
+| ![4](https://user-images.githubusercontent.com/56026214/209552437-6d56d15b-84c2-4d8d-8921-a973c1a7cbb6.png)
+|![5](https://user-images.githubusercontent.com/56026214/209552453-b1b2e75e-9abe-4753-8293-f7bcca52a8e3.png)|
 
  햄버거 모양을 누르지 않고 스와이프를 누른채로 옆을 당기면 drawer를 꺼낼 수 있다.
 
@@ -89,7 +90,7 @@ __실행 결과__
 
 |                    x검색 버튼을 누른 경우                    |
 | :----------------------------------------------------------: |
-| <img src="C:\Users\vsvx1\AppData\Roaming\Typora\typora-user-images\image-20221226220226318.png" alt="image-20221226220226318" style="zoom:25%;" /> |
+| ![6](https://user-images.githubusercontent.com/56026214/209552464-d92dabfc-af57-4095-8768-d6d7aab7477d.png) |
 
 검색 창이 열리며 검색이 가능하다. 
 
