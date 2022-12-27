@@ -135,3 +135,28 @@ Drawer에서는 네비게이션을 이용하여 많이 사용하는 형태인 �
 | :-------: | :------------------------: | :---------: |
 |   <img width="398" alt="1" src="https://user-images.githubusercontent.com/56026214/209635406-4176ffd0-52c6-47b9-8522-6fc5a941dc54.png"> |              <img width="398" alt="2" src="https://user-images.githubusercontent.com/56026214/209635416-e22cb1a0-9ecf-433e-be00-29685e69027c.png">  |     <img width="399" alt="3" src="https://user-images.githubusercontent.com/56026214/209635427-2ee8bf2d-c0ce-419c-ba1a-7cd17b65d0cb.png">|
 
+플로팅 확장 버튼 기능으로 intent 기능을 이용하여 다른 액티비티에 간 후
+
+해당 EditText에서 글을 등록하고 AppBar에 있는 저장 버튼을 누르면 다시 메인 액티비티에 와서
+
+해당 등록된 글을 저장한다.
+
+
+
+---
+
+
+
+## ch14 실습
+
+
+
+| 배터리 충전 화면 | 충전 x 화면 | RUN RECEIVER 버튼 눌렀을 때 |
+| :--------------: | :---------: | :-------------------------: |
+|        1         |      2      |              3              |
+
+
+
+브로드캐스트 리시버를 통해 배터리 정보를 확인 할 수 있는 기능을 만들었다.
+
+버튼을 누르면 예전 실습에서 사용한 알림 기능을 사용하여 기능이 작동하는지 확인했다.
