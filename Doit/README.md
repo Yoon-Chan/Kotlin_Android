@@ -133,5 +133,5 @@ Drawer에서는 네비게이션을 이용하여 많이 사용하는 형태인 �
 
 | 시작 화면 | 플로팅 확장 버튼 누른 경우 | 등록한 경우 |
 | :-------: | :------------------------: | :---------: |
-|     1     |             2              |      3      |
+|   <img width="398" alt="1" src="https://user-images.githubusercontent.com/56026214/209635406-4176ffd0-52c6-47b9-8522-6fc5a941dc54.png"> |              <img width="398" alt="2" src="https://user-images.githubusercontent.com/56026214/209635416-e22cb1a0-9ecf-433e-be00-29685e69027c.png">  |     <img width="399" alt="3" src="https://user-images.githubusercontent.com/56026214/209635427-2ee8bf2d-c0ce-419c-ba1a-7cd17b65d0cb.png">|
 
