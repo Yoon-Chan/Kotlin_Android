@@ -44,7 +44,7 @@ reset 버튼을 누르면 다시 0으로 초기화 된다.
 
 | 시작화면 | 값 입력 | 체인지 버튼 | 회전했을 경우 |
 | :------: | :-----: | :---------: | :-----------: |
-|         |    2    |      3      |       4       |
+| ![1](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\1.png) | ![2](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\2.png) |      ![3](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\3.png)      |       ![4](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\4.png)       |
 
 
 
