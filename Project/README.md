@@ -12,7 +12,7 @@
 
 | 시작화면 | + 버튼 눌렀을 때 | reset 버튼 눌렀을 때 | 화면을 회전했을 경우 |
 | :------: | :--------------: | :------------------: | :------------------: |
-|    1     |        2         |          3           |          4           |
+|   ![1](https://user-images.githubusercontent.com/56026214/209665066-7ba2b931-6136-4214-a599-2b3dec4088ad.png)|![2](https://user-images.githubusercontent.com/56026214/209665069-3457f4c7-77bb-4951-b17f-b63ee4965996.png)|![3](https://user-images.githubusercontent.com/56026214/209665076-845a27c2-3ec3-46fd-bd33-f81b3f2e8477.png)|![5](https://user-images.githubusercontent.com/56026214/209665080-e6f4c0b2-2144-4abf-9cb3-6112817ed441.png)|
 
 
 
