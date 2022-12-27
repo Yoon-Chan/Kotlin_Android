@@ -153,7 +153,7 @@ Drawer에서는 네비게이션을 이용하여 많이 사용하는 형태인 �
 
 | 배터리 충전 화면 | 충전 x 화면 | RUN RECEIVER 버튼 눌렀을 때 |
 | :--------------: | :---------: | :-------------------------: |
-|        1         |      2      |              3              |
+|     <img width="398" alt="1" src="https://user-images.githubusercontent.com/56026214/209640280-49559cc0-2f19-44f2-92cd-06cb432c5ac2.png"> |      <img width="401" alt="2" src="https://user-images.githubusercontent.com/56026214/209640289-5eecb12b-adf5-452e-9940-20aa06e3e3f5.png"> |<img width="390" alt="3" src="https://user-images.githubusercontent.com/56026214/209640299-c3d88793-3a2a-42d8-8e35-96092dfa415b.png">|
 
 
 
