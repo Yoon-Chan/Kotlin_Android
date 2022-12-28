@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">project3</string>
+    <string name="rhplus">Rh+</string>
+    <string name="rhMinus">Rh-</string>
+</resources>
