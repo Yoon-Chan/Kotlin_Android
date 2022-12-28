@@ -44,7 +44,7 @@ reset 버튼을 누르면 다시 0으로 초기화 된다.
 
 | 시작화면 | 값 입력 | 체인지 버튼 | 회전했을 경우 |
 | :------: | :-----: | :---------: | :-----------: |
-| ![1](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\1.png) | ![2](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\2.png) |      ![3](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\3.png)      |       ![4](C:\Users\vsvx1\OneDrive\Pictures\Project\project2\4.png)       |
+| ![1](https://user-images.githubusercontent.com/56026214/209856489-d014e9a8-bb59-422e-88c1-740edf70eadf.png)| ![2](https://user-images.githubusercontent.com/56026214/209856514-ffb9588c-36f5-413e-829e-8de9bb6ff532.png) |    ![3](https://user-images.githubusercontent.com/56026214/209856522-4025a943-951d-49ec-ac6d-eec26ca71976.png)|![4](https://user-images.githubusercontent.com/56026214/209856528-b1c360d4-5b91-46b3-9a72-692d136e1b9f.png)|
 
 
 
@@ -76,11 +76,11 @@ UI에 경우 app에는 Linearlayout을 사용했기 때문에 가로일 때의 �
 
 | 메인 화면 | 작성 버튼을 누른 후 생년월일 누른 경우 | 혈액형 Spinner 누른 경우 | 저장된 값들 |
 | :-------: | :------------------------------------: | :----------------------: | :---------: |
-|     1     |                   2                    |            3             |      4      |
+|     ![1](https://user-images.githubusercontent.com/56026214/209856562-4fb4df86-e59b-4551-a356-47eba610bb3e.png)|                          ![2](https://user-images.githubusercontent.com/56026214/209856571-11641aad-6159-40b3-9173-09b3549ea898.png)|         ![3](https://user-images.githubusercontent.com/56026214/209856578-413dabb0-5631-412b-aca8-93718f0d9a25.png)|      ![5](https://user-images.githubusercontent.com/56026214/209856604-ffd4d2fc-ba39-4a28-a5d9-ff4e405c8049.png)|
 
 | 저장 버튼을 누른 경우 | 저장된 핸드폰 번호를 누른 경우 | 초기화 버튼을 누른 경우 |
 | :-------------------: | :----------------------------: | :---------------------: |
-|           5           |               6                |            7            |
+|         ![6](https://user-images.githubusercontent.com/56026214/209856637-6a54be5d-321a-4804-bbfe-60260164ab29.png)|                 ![7](https://user-images.githubusercontent.com/56026214/209856646-eb3f36e5-0c34-47f3-bc90-a76aa6bd10fc.png)|           ![8](https://user-images.githubusercontent.com/56026214/209856659-c594207d-f9e3-4b9d-b128-0f44b7579b70.png)|
 
 
 
