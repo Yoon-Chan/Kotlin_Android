@@ -112,11 +112,11 @@ UI에 경우 app에는 Linearlayout을 사용했기 때문에 가로일 때의 �
 
 | 시작 화면 | 덧셈 결과 | 뺄셈 결과 | 추가 연산 결과 |
 | :-------: | :-------: | :-------: | :------------: |
-|     1     |     2     |     3     |       4        |
+|    ![1](https://user-images.githubusercontent.com/56026214/209992013-e7b10a6b-81bf-4710-a00b-607423f54811.png)|      ![2](https://user-images.githubusercontent.com/56026214/209992017-c49c07e5-65b9-4c47-bf4e-521e96017fa5.png)|     ![3](https://user-images.githubusercontent.com/56026214/209992023-3f967116-9837-45c5-8cbd-c4199dba643b.png)|         ![4](https://user-images.githubusercontent.com/56026214/209992029-accf5d54-bb6e-40f1-9ee3-95043730ddf6.png)|
 
 | 다크모드 | 초기화 버튼 |
 | :------: | :---------: |
-|    5     |      6      |
+|   ![5](https://user-images.githubusercontent.com/56026214/209992047-0a2f15e1-74cb-44cb-8f4f-6ab3089dd1e0.png)|    ![6](https://user-images.githubusercontent.com/56026214/209992054-9db43065-b668-41d8-a7cf-88be0f52d99f.png)|
 
 
 
