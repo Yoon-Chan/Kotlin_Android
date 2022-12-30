@@ -143,13 +143,13 @@ UI에 경우 app에는 Linearlayout을 사용했기 때문에 가로일 때의 �
 
 | 시작 화면 | 타이머 설정 | 시작 버튼 | 일시 정지 |
 | :-------: | :---------: | :-------: | :-------: |
-|           |             |           |           |
+|      ![1](https://user-images.githubusercontent.com/56026214/210086764-7ff1e3bd-803e-48f1-94df-bbaca0a68149.png)|     ![2](https://user-images.githubusercontent.com/56026214/210086770-77cc82d1-8b40-468d-aa87-422f1d87d898.png)|      ![3](https://user-images.githubusercontent.com/56026214/210086773-ff623cf1-65ac-481c-b896-3b90f487d99c.png)|      ![4](https://user-images.githubusercontent.com/56026214/210086777-c3720a7d-8ae1-4d56-b529-f0b211a1b2d4.png)|
 
 
 
 | 다시 시작 | 측정 버튼 | 중지 버튼 | 종료 - 네 |
 | :-------: | :-------: | :-------: | :-------: |
-|           |           |           |           |
+|    ![5](https://user-images.githubusercontent.com/56026214/210086800-b919847b-0f98-4061-b6ce-36abc85cd516.png)|     ![6](https://user-images.githubusercontent.com/56026214/210086805-ac50ce3b-5926-4970-8e8a-0882575fe9f9.png)|    ![7](https://user-images.githubusercontent.com/56026214/210086810-ed3c9925-5e16-4991-9b50-80383c59b4b5.png)|      ![8](https://user-images.githubusercontent.com/56026214/210086819-7b046200-c3e7-4628-bfcd-9ea208073fc5.png)|
 
 
 
