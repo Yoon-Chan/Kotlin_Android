@@ -180,13 +180,13 @@ ChipGroup을 이용하여 단어 8품사 선택하는 기능을 만들었다.
 
 | 시작 화면 | 플로팅 버튼(+) 눌렀을 경우 | 단어를 1자리또는 비어있는 경우 경고 표시 | 작성 완료 |
 | :-------: | :------------------------: | :--------------------------------------: | :-------: |
-|     1     |             2              |                    3                     |     4     |
+|   ![1](https://user-images.githubusercontent.com/56026214/210228496-fa3c45b8-7c05-413e-bb5f-10d76c12e1ea.png)|                   ![2](https://user-images.githubusercontent.com/56026214/210228501-bea92ec8-dd47-479d-ab8e-0b0ebbc27c79.png)|                          ![3](https://user-images.githubusercontent.com/56026214/210228507-1ca78c3a-3370-493f-be92-213417ad0404.png)|   ![4](https://user-images.githubusercontent.com/56026214/210228513-4f6ca359-e6da-4c36-9c93-506b093d65d1.png)|
 
 
 
 | 추가 버튼 | 해당 단어 클릭 | 삭제 버튼  이미지 | 수정 버튼 이미지 | 수정 완료 버튼 |
 | :-------: | :------------: | :---------------: | :--------------: | :------------: |
-|     5     |       6        |         7         |        8         |       9        |
+|     ![5](https://user-images.githubusercontent.com/56026214/210228519-548d95c3-2c92-4643-9314-80d2613e3ebe.png)|           ![6](https://user-images.githubusercontent.com/56026214/210228527-e8f77163-4014-4d37-ba07-fe4383f8e339.png)|        ![7](https://user-images.githubusercontent.com/56026214/210228539-1f362477-305e-479f-becd-019f262042b0.png)|         ![8](https://user-images.githubusercontent.com/56026214/210228545-6188241b-3654-4742-b903-feba3dd65da5.png)|        ![9](https://user-images.githubusercontent.com/56026214/210228552-b18bfa12-b148-4352-a529-3eb096920ce1.png)|
 
 
 
