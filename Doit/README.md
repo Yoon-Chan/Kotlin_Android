@@ -203,11 +203,11 @@ Drawer에서는 네비게이션을 이용하여 많이 사용하는 형태인 �
 
 | 시작 화면 | 앱바 설정 클릭 | 설정 변경 - ID |
 | :-------: | :------------: | :------------: |
-|           |                |                |
+|     ![1](https://user-images.githubusercontent.com/56026214/210273381-271bb285-4176-4312-84f6-d0ebd50d35d3.png)|          ![2](https://user-images.githubusercontent.com/56026214/210273383-64d0c7f6-b3b0-4fca-b114-47dfb4b1ca98.png)|        ![3](https://user-images.githubusercontent.com/56026214/210273401-4c27f112-9ecf-4722-ab1c-9c7c29675f29.png)|
 
 | 설정 변경 - 색상선택 | 확장 버튼 클릭 | 저장 버튼 클릭 |
 | :------------------: | :------------: | :------------: |
-|                      |                |                |
+|             ![4](https://user-images.githubusercontent.com/56026214/210273414-8151f78f-7ad9-4d42-b77e-5a6a450f7838.png)|        ![5](https://user-images.githubusercontent.com/56026214/210273417-cb5871ea-9012-40e3-b84f-1568fa0315f3.png)|       ![7](https://user-images.githubusercontent.com/56026214/210273478-96745e58-059d-4818-ab52-b700a5314fce.png)|
 
 
 
