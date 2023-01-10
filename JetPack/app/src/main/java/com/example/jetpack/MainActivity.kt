@@ -34,7 +34,6 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
 //이 애너테이션은 이 함수가 컴포저블 함수임을 시스템에 알린다.
 @Composable
 fun DemoText(message: String, fontSize: Float) {
@@ -95,7 +94,7 @@ fun DemoScreen() {
 
 @Preview
 @Composable
-fun Preview(){
+fun Preview() {
     JetPackTheme {
         DemoScreen()
     }
