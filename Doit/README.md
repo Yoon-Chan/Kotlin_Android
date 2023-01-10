@@ -244,7 +244,7 @@ Volley와 Retrofit 두 라이브러리를 이용하여 만들었다.
 
 | VOLLEY | RETROFIT |
 | :----: | :------: |
-|   1    |    2     |
+|  ![1](https://user-images.githubusercontent.com/56026214/211487287-5b43b9bf-e207-4e69-8785-ee4692d6a17e.png)|    ![2](https://user-images.githubusercontent.com/56026214/211487297-f32b55b9-4a3f-4978-8983-3cd4e1887889.png)|
 
 
 
@@ -263,6 +263,7 @@ JSON 데이터는 JsonObjectRequest를 이용하여 해당 url에 JSON 데이터
 
 
 Retrofit 라이브러리는 Call 인터페이스를 구현하여 직접 구현한 NetworkService 인터페이스를 이용하여 url에 접근하고 데이터를 @Query @GET을 사용하여 해당 url에 있는 데이터를 가져오도록 하고 가져온 데이터를 이용하여 화면에 보여준다.
+해당 구현의 enqueue를 이용하면 실패했을 때, 성공했을 때를 각각 구현할 수 있다.
 
 
 
