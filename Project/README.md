@@ -226,8 +226,7 @@ GridLayout형식으로 가로 2칸씩 화면에 보이게 했다.
 
 | 권한 허용 다이얼로그 | 권한 허용 | 시작 화면 | 사진 선택 화면 |
 | :------------------: | :-------: | :-------: | :------------: |
-|            ![2](https://user-images.githubusercontent.com/56026214/211790551-7c498019-2195-44e5-a11b-e4d255e4185a.jpg)|      ![3](https://user-images.githubusercontent.com/56026214/211790568-359b5c4d-84dc-4e32-9916-6713c3967f51.jpg)|   ![1](https://user-images.githubusercontent.com/56026214/211790590-2cc1e876-d624-4ffb-a42a-c02f8729a3bf.jpg)
-|![4](https://user-images.githubusercontent.com/56026214/211790627-93ce5225-9001-44c7-b723-be89a728b3db.jpg)|
+|            ![2](https://user-images.githubusercontent.com/56026214/211790551-7c498019-2195-44e5-a11b-e4d255e4185a.jpg)|      ![3](https://user-images.githubusercontent.com/56026214/211790568-359b5c4d-84dc-4e32-9916-6713c3967f51.jpg)|   ![1](https://user-images.githubusercontent.com/56026214/211790590-2cc1e876-d624-4ffb-a42a-c02f8729a3bf.jpg)|![4](https://user-images.githubusercontent.com/56026214/211790627-93ce5225-9001-44c7-b723-be89a728b3db.jpg)|
 
 | 사진 선택(다중) | 화면  사진 선택(한 개) | 나만의 앨범 버튼 | 탭바 뒤로가기 버튼 |
 | :-------------: | :--------------------: | :--------------: | :----------------: |
