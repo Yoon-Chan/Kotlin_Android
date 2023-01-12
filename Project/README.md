@@ -263,7 +263,7 @@ GridLayout형식으로 가로 2칸씩 화면에 보이게 했다.
 
 | 시작 화면 | 화면을 나갔을 경우(백그라운드) | notification |
 | :-------: | :----------------------------: | :----------: |
-|           |                                |              |
+|   ![1](https://user-images.githubusercontent.com/56026214/212126393-63ff8c46-fea7-4a21-9126-a67e33e7061d.png)|               ![2](https://user-images.githubusercontent.com/56026214/212126405-1f4c81ba-51a1-44be-9d5d-2abc797506bf.png)|         ![3](https://user-images.githubusercontent.com/56026214/212126431-b71e2aa6-9606-4f55-ad27-9588c67dadc5.png)|
 
 
 
