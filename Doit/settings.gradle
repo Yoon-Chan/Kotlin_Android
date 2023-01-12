@@ -4,6 +4,7 @@ pluginManagement {
         google()
         mavenCentral()
     }
+
 }
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
@@ -12,6 +13,7 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+
 rootProject.name = "Doit"
 include ':app'
 include ':ch6_view'
@@ -28,3 +30,4 @@ include ':ch15_outer'
 include ':ch16_provider'
 include ':ch17_database'
 include ':ch18_network'
+include ':ch20_firebase'
