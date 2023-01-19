@@ -14,7 +14,8 @@
 
 | 시작화면 | 탭 또는 스와이프로 화면 이동 | 마지막 시점 돌아가기 | 탭 이름 바꾸기 |
 | :------: | :--------------------------: | :------------------: | :------------: |
-|          |                              |                      |                |
+|    ![1](https://user-images.githubusercontent.com/56026214/213439430-57ca186b-9e5f-4820-9e74-e9576682184c.jpg)| <img width="313" alt="2" src="https://user-images.githubusercontent.com/56026214/213439450-ff246f80-60f6-43ef-bdd4-b1aa5567f3ba.png"> |![3](https://user-images.githubusercontent.com/56026214/213439464-754dc2b1-18c0-4621-a627-2e0da489e888.jpg)|
+![4](https://user-images.githubusercontent.com/56026214/213439509-81302010-d9c6-452f-91fc-a2e51ddc8d65.jpg)|
 
 
 
@@ -26,4 +27,8 @@
 
 
 
-마지막 시점 돌아가기 버튼과, 탭 이름 바꾸기 버튼은 Shared
+마지막 시점 돌아가기 버튼과, 탭 이름 바꾸기 버튼은 SharedPreference를 이용하여 데이터를 저장하고 불러오도록 했다.
+
+뷰 페이저와 탭(TabLayoutMediator)을 이용하여 스와이프를 이용 그리고 탭을 눌렀을 때 화면 전환이 이뤄지도록 했다.
+
+각 프레그먼트를 이용하여 화면을 나타나도록 하였다. 
