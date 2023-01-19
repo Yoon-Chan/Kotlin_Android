@@ -14,7 +14,7 @@
 
 | 시작화면 | 탭 또는 스와이프로 화면 이동 | 마지막 시점 돌아가기 | 탭 이름 바꾸기 |
 | :------: | :--------------------------: | :------------------: | :------------: |
-|    ![1](https://user-images.githubusercontent.com/56026214/213439430-57ca186b-9e5f-4820-9e74-e9576682184c.jpg)| <img width="600" alt="2" src="https://user-images.githubusercontent.com/56026214/213439450-ff246f80-60f6-43ef-bdd4-b1aa5567f3ba.png"> |![3](https://user-images.githubusercontent.com/56026214/213439464-754dc2b1-18c0-4621-a627-2e0da489e888.jpg)|![4](https://user-images.githubusercontent.com/56026214/213439509-81302010-d9c6-452f-91fc-a2e51ddc8d65.jpg)|
+|    ![1](https://user-images.githubusercontent.com/56026214/213439430-57ca186b-9e5f-4820-9e74-e9576682184c.jpg)| <img width="1200" alt="2" src="https://user-images.githubusercontent.com/56026214/213439450-ff246f80-60f6-43ef-bdd4-b1aa5567f3ba.png"> |![3](https://user-images.githubusercontent.com/56026214/213439464-754dc2b1-18c0-4621-a627-2e0da489e888.jpg)|![4](https://user-images.githubusercontent.com/56026214/213439509-81302010-d9c6-452f-91fc-a2e51ddc8d65.jpg)|
 
 
 
