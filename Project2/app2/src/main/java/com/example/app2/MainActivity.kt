@@ -7,8 +7,13 @@ import androidx.core.content.ContextCompat
 import com.example.app2.databinding.ActivityMainBinding
 import android.Manifest
 import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
+import android.media.MediaRecorder
 import android.net.Uri
+import android.os.Build
 import android.provider.Settings
+import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 
@@ -20,48 +25,140 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
+    private var recorder: MediaRecorder? = null
+    private var fileName: String = ""
+
+    private var state: State = State.RELEASE
+
+    //릴리즈 - 녹음중 - 릴리즈
+    // 릴리즈 - 재생 - 릴리즈
+    enum class State {
+        RELEASE, RECORDING, PLAYING
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //절대 경로/audiorecordtest.3gp 파일로 이동
+        fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
+
 
         binding.recordButton.setOnClickListener {
 
-            when {
-                ContextCompat.checkSelfPermission(
-                    this,
-                    Manifest.permission.RECORD_AUDIO
-                ) == PackageManager.PERMISSION_GRANTED -> {
-                    // You can use the API that requires the permission.
-                    //녹음을 시작하는 곳 (권한 확인)
+            when (state) {
+                State.RELEASE -> {
+                    record()
                 }
-                ActivityCompat.shouldShowRequestPermissionRationale(
-                    this,
-                    Manifest.permission.RECORD_AUDIO
-                ) -> {
-                    // In an educational UI, explain to the user why your app requires this
-                    // permission for a specific feature to behave as expected, and what
-                    // features are disabled if it's declined. In this UI, include a
-                    // "cancel" or "no thanks" button that lets the user continue
-                    // using your app without granting the permission.
-                    showPermissionRationalDialog()
+                State.RECORDING -> {
+                    onRecord(false)
                 }
-                else -> {
-                    // You can directly ask for the permission.
-                    // The registered ActivityResultCallback gets the result of this request.
-                    ActivityCompat.requestPermissions(
-                        this,
-                        arrayOf(Manifest.permission.RECORD_AUDIO),
-                        REQUeST_RECORD_AUDIO_CODE
-                    )
+                State.PLAYING -> {
+
                 }
             }
 
 
         }
 
+    }
+
+    private fun record() {
+        state = State.RECORDING
+
+        when {
+            ContextCompat.checkSelfPermission(
+                this,
+                Manifest.permission.RECORD_AUDIO
+            ) == PackageManager.PERMISSION_GRANTED -> {
+                // You can use the API that requires the permission.
+                //녹음을 시작하는 곳 (권한 확인)
+
+                onRecord(true)
+            }
+            ActivityCompat.shouldShowRequestPermissionRationale(
+                this,
+                Manifest.permission.RECORD_AUDIO
+            ) -> {
+                // In an educational UI, explain to the user why your app requires this
+                // permission for a specific feature to behave as expected, and what
+                // features are disabled if it's declined. In this UI, include a
+                // "cancel" or "no thanks" button that lets the user continue
+                // using your app without granting the permission.
+                showPermissionRationalDialog()
+            }
+            else -> {
+                // You can directly ask for the permission.
+                // The registered ActivityResultCallback gets the result of this request.
+                ActivityCompat.requestPermissions(
+                    this,
+                    arrayOf(Manifest.permission.RECORD_AUDIO),
+                    REQUeST_RECORD_AUDIO_CODE
+                )
+            }
+        }
+    }
+
+    //record가 시작되는 함수
+    private fun onRecord(start: Boolean) = if (start) {
+        startRecording()
+    } else
+        stopRecording()
+
+
+    private fun startRecording() {
+        recorder = MediaRecorder().apply {
+            setAudioSource(MediaRecorder.AudioSource.MIC)
+            setOutputFormat(MediaRecorder.OutputFormat.THREE_GPP)
+            setOutputFile(fileName)
+            setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB)
+
+            //실패할 수 있기 때문에 예외 처리
+            try {
+                //준비 완료
+                prepare()
+            } catch (e: Exception) {
+                Log.e("APP", "prepare() failed ${e.printStackTrace()}")
+            }
+
+            start()
+        }
+
+        binding.recordButton.setImageDrawable(
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.baseline_stop_24
+            )
+        )
+
+        binding.recordButton.imageTintList = ColorStateList.valueOf(Color.BLACK)
+
+        binding.playdButton.isEnabled = false
+        binding.playdButton.alpha = 0.3f
+    }
+
+    private fun stopRecording() {
+        recorder?.apply {
+            stop()
+            release()
+        }
+
+        recorder = null
+        state = State.RELEASE
+        binding.recordButton.setImageDrawable(
+            ContextCompat.getDrawable(
+                this,
+                R.drawable.baseline_fiber_manual_record_24
+            )
+        )
+
+        binding.recordButton.imageTintList =
+            ColorStateList.valueOf(ContextCompat.getColor(this, R.color.red))
+
+        binding.playdButton.isEnabled =true
+        binding.playdButton.alpha = 1.0f
     }
 
 
@@ -112,10 +209,14 @@ class MainActivity : AppCompatActivity() {
         val audioRecordPermissionGranted = requestCode == REQUeST_RECORD_AUDIO_CODE
                 && grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED
 
-        if (audioRecordPermissionGranted){
-            //todo 녹음 작업 시작
+        if (audioRecordPermissionGranted) {
+            onRecord(true)
         } else {
-            if(ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO))
+            if (ActivityCompat.shouldShowRequestPermissionRationale(
+                    this,
+                    Manifest.permission.RECORD_AUDIO
+                )
+            )
                 showPermissionRationalDialog()
             else {
                 showPermissionSettingDialog()
