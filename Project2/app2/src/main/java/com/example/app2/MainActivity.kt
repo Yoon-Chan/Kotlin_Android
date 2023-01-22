@@ -102,6 +102,9 @@ class MainActivity : AppCompatActivity(), OnTimerTickListener {
             start()
         }
 
+        binding.waveformView.clearWave()
+        timer.start()
+
         // 녹음이 끝났을 때
         player?.setOnCompletionListener {
             stopPlaying()
@@ -116,6 +119,8 @@ class MainActivity : AppCompatActivity(), OnTimerTickListener {
     private fun stopPlaying(){
         state = State.RELEASE
 
+
+        timer.stop()
         player?.release()
         player = null
 
@@ -186,9 +191,10 @@ class MainActivity : AppCompatActivity(), OnTimerTickListener {
         }
 
         //최대 진폭
+        binding.waveformView.clearData()
         timer.start()
 
-        
+
         binding.recordButton.setImageDrawable(
             ContextCompat.getDrawable(
                 this,
@@ -290,6 +296,17 @@ class MainActivity : AppCompatActivity(), OnTimerTickListener {
     }
 
     override fun onTick(duration: Long) {
-        binding.waveformView.addAmplitude(recorder?.maxAmplitude?.toFloat() ?: 0f )
+
+        val millisecond = duration % 1000
+        val second = (duration / 1000) % 60
+        val minute = (duration / 1000) / 60
+
+        if(state == State.PLAYING){
+            binding.waveformView.replayAmplitude(duration.toInt())
+        }else if(state == State.RECORDING){
+            binding.waveformView.addAmplitude(recorder?.maxAmplitude?.toFloat() ?: 0f )
+        }
+
+        binding.timerTextView.text = String.format("%02d:%02d.%02d", minute, second, millisecond / 10)
     }
 }
