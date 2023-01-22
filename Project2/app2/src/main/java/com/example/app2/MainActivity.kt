@@ -18,18 +18,17 @@ import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnTimerTickListener {
 
     companion object {
         private const val REQUEST_RECORD_AUDIO_CODE = 200
     }
 
+    private lateinit var timer :Timer
     private lateinit var binding: ActivityMainBinding
-
     private var recorder: MediaRecorder? = null
     private var player : MediaPlayer? = null
     private var fileName: String = ""
-
     private var state: State = State.RELEASE
 
     //릴리즈 - 녹음중 - 릴리즈
@@ -46,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         //절대 경로/audiorecordtest.3gp 파일로 이동
         fileName = "${externalCacheDir?.absolutePath}/audiorecordtest.3gp"
-
+        timer = Timer(this)
 
         binding.recordButton.setOnClickListener {
             when (state) {
@@ -186,6 +185,10 @@ class MainActivity : AppCompatActivity() {
             start()
         }
 
+        //최대 진폭
+        timer.start()
+
+        
         binding.recordButton.setImageDrawable(
             ContextCompat.getDrawable(
                 this,
@@ -206,6 +209,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         recorder = null
+        timer.stop()
         state = State.RELEASE
         binding.recordButton.setImageDrawable(
             ContextCompat.getDrawable(
@@ -283,5 +287,9 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
+    }
+
+    override fun onTick(duration: Long) {
+        binding.waveformView.addAmplitude(recorder?.maxAmplitude?.toFloat() ?: 0f )
     }
 }

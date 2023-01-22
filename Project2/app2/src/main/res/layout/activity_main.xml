@@ -19,7 +19,7 @@
         />
 
 
-    <View
+    <com.example.app2.WaveformView
         android:id="@+id/waveformView"
         android:layout_width="0dp"
         android:layout_height="250dp"
