@@ -9,6 +9,7 @@ import android.Manifest
 import android.content.Intent
 import android.content.res.ColorStateList
 import android.graphics.Color
+import android.media.MediaPlayer
 import android.media.MediaRecorder
 import android.net.Uri
 import android.os.Build
@@ -20,12 +21,13 @@ import androidx.core.app.ActivityCompat
 class MainActivity : AppCompatActivity() {
 
     companion object {
-        private const val REQUeST_RECORD_AUDIO_CODE = 200
+        private const val REQUEST_RECORD_AUDIO_CODE = 200
     }
 
     private lateinit var binding: ActivityMainBinding
 
     private var recorder: MediaRecorder? = null
+    private var player : MediaPlayer? = null
     private var fileName: String = ""
 
     private var state: State = State.RELEASE
@@ -47,7 +49,6 @@ class MainActivity : AppCompatActivity() {
 
 
         binding.recordButton.setOnClickListener {
-
             when (state) {
                 State.RELEASE -> {
                     record()
@@ -59,9 +60,68 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-
-
         }
+
+        binding.playdButton.setOnClickListener {
+            when (state) {
+                State.RELEASE -> {
+                    onPlay(true)
+                }
+                else -> {
+
+                    //do nothing
+                }
+            }
+        }
+
+        binding.stopdButton.setOnClickListener {
+            when (state) {
+
+                State.PLAYING -> {
+                    onPlay(false)
+                }
+                else -> {
+                    //do nothing
+                }
+            }
+        }
+
+    }
+
+    private fun onPlay(start : Boolean) = if(start) startPlaying() else stopPlaying()
+
+    private fun startPlaying(){
+        state = State.PLAYING
+
+        player = MediaPlayer().apply {
+            try {
+                setDataSource(fileName)
+                prepare()
+            }catch (e: Exception){
+                Log.e("APP", "media player prepare failed ${e.printStackTrace()}")
+            }
+            start()
+        }
+
+        // 녹음이 끝났을 때
+        player?.setOnCompletionListener {
+            stopPlaying()
+        }
+
+
+        binding.recordButton.isEnabled = false
+        binding.recordButton.alpha = 0.3f
+
+    }
+
+    private fun stopPlaying(){
+        state = State.RELEASE
+
+        player?.release()
+        player = null
+
+        binding.recordButton.isEnabled = true
+        binding.recordButton.alpha = 1.0f
 
     }
 
@@ -95,7 +155,7 @@ class MainActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.RECORD_AUDIO),
-                    REQUeST_RECORD_AUDIO_CODE
+                    REQUEST_RECORD_AUDIO_CODE
                 )
             }
         }
@@ -169,7 +229,7 @@ class MainActivity : AppCompatActivity() {
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.RECORD_AUDIO),
-                    REQUeST_RECORD_AUDIO_CODE
+                    REQUEST_RECORD_AUDIO_CODE
                 )
 
             }
@@ -206,7 +266,7 @@ class MainActivity : AppCompatActivity() {
     ) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-        val audioRecordPermissionGranted = requestCode == REQUeST_RECORD_AUDIO_CODE
+        val audioRecordPermissionGranted = requestCode == REQUEST_RECORD_AUDIO_CODE
                 && grantResults.firstOrNull() == PackageManager.PERMISSION_GRANTED
 
         if (audioRecordPermissionGranted) {
