@@ -54,13 +54,13 @@
 
 | 시작 화면 | 녹음 시작 버튼 누를 경우 권한 설정 | 권한 허용하기 누를 경우 | 권한 허용하지 않은 경우 |
 | --------- | ---------------------------------- | ----------------------- | ----------------------- |
-|           |                                    |                         |                         |
+|  ![7](https://user-images.githubusercontent.com/56026214/213930244-b25f583d-9d18-426d-840d-2beb39c8bc37.png)| ![1](https://user-images.githubusercontent.com/56026214/213930182-94d2755b-2b91-41f1-8738-b8919fbf1947.jpg)|              ![2](https://user-images.githubusercontent.com/56026214/213930255-fb107119-4eb9-4754-bebf-0d4e34df453c.png)|             ![3](https://user-images.githubusercontent.com/56026214/213930259-17f04bb7-9488-4149-bad4-ccb3fd475ae6.png)|
 
 
 
-| 앱 세팅 화면 | 권한을 허용 한 뒤 녹음을 시작한 경우 | 녹음 완료 후 정지 화면 | 녹음 시작 화면 |
+| 앱 세팅 화면 | 권한을 허용 한 뒤 녹음을 시작한 경우 | 녹음 완료 후 정지 화면 |
 | ------------ | ------------------------------------ | ---------------------- | -------------- |
-|              |                                      |                        |                |
+|     ![6](https://user-images.githubusercontent.com/56026214/213930273-38c7a713-e77e-485b-bc8f-51f357c689c7.png)|                     ![4](https://user-images.githubusercontent.com/56026214/213930288-68617dcd-30fb-4588-b561-82ebbd447e41.jpg)|              ![5](https://user-images.githubusercontent.com/56026214/213930296-2582f92a-080e-494a-91c0-0d9bc868ed21.jpg)|
 
 
 
