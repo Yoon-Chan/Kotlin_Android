@@ -59,8 +59,8 @@
 
 
 | 앱 세팅 화면 | 권한을 허용 한 뒤 녹음을 시작한 경우 | 녹음 완료 후 정지 화면 |
-| ------------ | ------------------------------------ | ---------------------- | -------------- |
-|     ![6](https://user-images.githubusercontent.com/56026214/213930273-38c7a713-e77e-485b-bc8f-51f357c689c7.png)|                     ![4](https://user-images.githubusercontent.com/56026214/213930288-68617dcd-30fb-4588-b561-82ebbd447e41.jpg)|              ![5](https://user-images.githubusercontent.com/56026214/213930296-2582f92a-080e-494a-91c0-0d9bc868ed21.jpg)|
+| ------------ | ------------------------------------ | ---------------------- |
+|![6](https://user-images.githubusercontent.com/56026214/213930273-38c7a713-e77e-485b-bc8f-51f357c689c7.png)|![4](https://user-images.githubusercontent.com/56026214/213930288-68617dcd-30fb-4588-b561-82ebbd447e41.jpg)|![5](https://user-images.githubusercontent.com/56026214/213930296-2582f92a-080e-494a-91c0-0d9bc868ed21.jpg)|
 
 
 
