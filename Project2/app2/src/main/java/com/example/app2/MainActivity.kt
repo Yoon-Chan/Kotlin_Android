@@ -302,7 +302,7 @@ class MainActivity : AppCompatActivity(), OnTimerTickListener {
         val minute = (duration / 1000) / 60
 
         if(state == State.PLAYING){
-            binding.waveformView.replayAmplitude(duration.toInt())
+            binding.waveformView.replayAmplitude()
         }else if(state == State.RECORDING){
             binding.waveformView.addAmplitude(recorder?.maxAmplitude?.toFloat() ?: 0f )
         }
