@@ -1,0 +1,119 @@
+package com.example.app3
+
+import android.annotation.SuppressLint
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+import androidx.core.view.isVisible
+import androidx.core.widget.addTextChangedListener
+import com.google.gson.Gson
+import okhttp3.*
+import java.io.BufferedReader
+import java.io.IOException
+import java.io.InputStreamReader
+import java.io.PrintWriter
+import java.net.HttpURLConnection
+
+import java.net.ServerSocket
+import java.net.Socket
+import java.net.URL
+
+class MainActivity : AppCompatActivity() {
+
+    val client = OkHttpClient()
+
+    @SuppressLint("MissingInflatedId")
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        val editText = findViewById<EditText>(R.id.serverHostEditText)
+        val confirmButton = findViewById<Button>(R.id.confirmButton)
+        val informationTextView = findViewById<TextView>(R.id.informationTextView)
+        var serverHost = ""
+
+
+        editText.addTextChangedListener {
+            serverHost = it.toString()
+        }
+
+        confirmButton.setOnClickListener {
+            val request: Request = Request.Builder()
+                .url("http://$serverHost:8080")
+                .build()
+
+            val callback = object : Callback {
+                override fun onFailure(call: Call, e: IOException) {
+
+                    runOnUiThread {
+                        Toast.makeText(this@MainActivity, "수신에 실패했습니다.", Toast.LENGTH_SHORT).show()
+                    }
+
+                }
+
+                override fun onResponse(call: Call, response: Response) {
+
+                    if (response.isSuccessful) {
+                        val res = response.body?.string()
+
+                        val message = Gson().fromJson(res, Message::class.java)
+
+                        runOnUiThread {
+                            informationTextView.isVisible = true
+                            informationTextView.text = message.message
+
+                            editText.isVisible = false
+                            confirmButton.isVisible = false
+                        }
+                    } else
+                        runOnUiThread {
+                            Toast.makeText(this@MainActivity, "수신에 실패했습니다.", Toast.LENGTH_SHORT)
+                                .show()
+                        }
+                }
+            }
+
+
+            client.newCall(request).enqueue(callback)
+        }
+
+
+//        Thread {
+//
+//            try {//애물레이터 한정 ip
+//                //자기 것을 사용하려면 컴퓨터IP 주소 사용할 것.
+//                val socket = Socket("10.0.2.2", 8080)
+//
+//                val printer = PrintWriter(socket.getOutputStream())
+//
+//                val reader = BufferedReader(InputStreamReader(socket.getInputStream()))
+//
+//                printer.println("GET / HTTP/1.1")
+//                printer.println("Host: 127.0.0.1:8080")
+//                printer.println("User-Agent: android")
+//                printer.println("\r\n")
+//                printer.flush()
+//
+//                var input: String? = "-1"
+//                while (input != null) {
+//                    input = reader.readLine()
+//                    Log.e("CLient", input)
+//                }
+//
+//                reader.close()
+//                printer.close()
+//                socket.close()
+//            } catch (e: Exception) {
+//                Log.e("Client", e.toString())
+//            }
+//
+//        }.start()
+//
+
+    }
+}
