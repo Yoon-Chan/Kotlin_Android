@@ -91,21 +91,19 @@
 
 아래는 소켓을 사용하여 데이터를 보내는 코드이다.
 
-
-
-
+![1](https://user-images.githubusercontent.com/56026214/214000236-bd74169a-9b9b-4512-81b9-97c19537e9f4.png)
 
 
 
 이 코드를 실행하고 크롬에서 localhost:8080을 실행하면 아래와 같은 화면이 나온다.
 
 
-
+![2](https://user-images.githubusercontent.com/56026214/214000258-27871c0b-ba1e-4c64-a665-436b0dd97eef.png)
 
 
 앱을 실행하면 아래와 같이 서버 호스트를 받는 Text와 버튼이 있다.
 
-
+![3](https://user-images.githubusercontent.com/56026214/214000276-767d8063-a99a-4b5d-a6e3-6cdbcdd6edae.png)
 
 
 
@@ -117,5 +115,11 @@ Json 형식으로 되어있으며 해당 json을 data class인 Message에서 mes
 
 안드로이드 스튜디오는 소켓이 아닌 OkHttpClient()를 이용하였다.
 
+![4](https://user-images.githubusercontent.com/56026214/214000298-eb95a44b-cdd2-439c-8bd3-85cadee84501.png)
+
+
+아래는 실행 영상입니다. 실행하기 전에 소켓을 사용한 코드를 실행하요 크롬에서 localhost:8080이 제대로 작동된 상태에서 실행한 영상이다.
+
+[video.webm](https://user-images.githubusercontent.com/56026214/214000527-01ef4415-1ca2-467f-a9fd-ef1dfe052008.webm)
 
 
