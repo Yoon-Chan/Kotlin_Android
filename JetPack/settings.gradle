@@ -16,3 +16,4 @@ rootProject.name = "JetPack"
 include ':app'
 include ':ex1'
 include ':stateexample'
+include ':complocaldemo'
