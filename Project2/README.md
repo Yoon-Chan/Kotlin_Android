@@ -115,7 +115,7 @@ Json 형식으로 되어있으며 해당 json을 data class인 Message에서 mes
 
 안드로이드 스튜디오는 소켓이 아닌 OkHttpClient()를 이용하였다.
 
-![4](https://user-images.githubusercontent.com/56026214/214000298-eb95a44b-cdd2-439c-8bd3-85cadee84501.png)
+<img src = "https://user-images.githubusercontent.com/56026214/214000298-eb95a44b-cdd2-439c-8bd3-85cadee84501.png" width = 500/>
 
 
 아래는 실행 영상입니다. 실행하기 전에 소켓을 사용한 코드를 실행하요 크롬에서 localhost:8080이 제대로 작동된 상태에서 실행한 영상이다.
