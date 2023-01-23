@@ -91,20 +91,17 @@
 
 아래는 소켓을 사용하여 데이터를 보내는 코드이다.
 
-![1](https://user-images.githubusercontent.com/56026214/214000236-bd74169a-9b9b-4512-81b9-97c19537e9f4.png)
 
-
+<img src = "https://user-images.githubusercontent.com/56026214/214000236-bd74169a-9b9b-4512-81b9-97c19537e9f4.png" width = 500/>
 
 이 코드를 실행하고 크롬에서 localhost:8080을 실행하면 아래와 같은 화면이 나온다.
 
 
-![2](https://user-images.githubusercontent.com/56026214/214000258-27871c0b-ba1e-4c64-a665-436b0dd97eef.png)
-
+<img src = "https://user-images.githubusercontent.com/56026214/214000258-27871c0b-ba1e-4c64-a665-436b0dd97eef.png" width = 500/>
 
 앱을 실행하면 아래와 같이 서버 호스트를 받는 Text와 버튼이 있다.
 
-![3](https://user-images.githubusercontent.com/56026214/214000276-767d8063-a99a-4b5d-a6e3-6cdbcdd6edae.png)
-
+<img src = "https://user-images.githubusercontent.com/56026214/214000298-eb95a44b-cdd2-439c-8bd3-85cadee84501.png" width = 500/>
 
 
 호스트를 입력하고 버튼을 누르면 해당 데이터를 받을 수 있다.
