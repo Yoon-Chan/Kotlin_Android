@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun DemoScreen() {
-    
+
     val modifier = Modifier
         .padding(all = 10.dp)
         .border(width = 2.dp, color = Color.Black)
