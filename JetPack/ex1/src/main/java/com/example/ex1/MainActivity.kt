@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    MainScreen("Android")
                 }
             }
         }
@@ -60,7 +60,7 @@ fun CustomList(items : List<String>){
 
 
 @Composable
-fun Greeting(name: String) {
+fun MainScreen(name: String) {
     Text(text = "Hello $name!")
 }
 
@@ -68,7 +68,7 @@ fun Greeting(name: String) {
 @Composable
 fun DefaultPreview() {
     JetPackTheme {
-        //Greeting("Android")
+        //MainScreen("Android")
         //CustomSwitch()
         CustomList(items = listOf("One","Two", "Three", "Four", "Five", "Six","Seven"))
     }

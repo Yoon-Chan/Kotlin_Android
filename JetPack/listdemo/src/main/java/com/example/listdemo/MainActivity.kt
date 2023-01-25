@@ -33,7 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Mainscreen()
+                    MainScreen()
                 }
             }
         }
@@ -41,7 +41,7 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Mainscreen() {
+fun MainScreen() {
 //    ColumnList()
 
     RowList()
@@ -131,6 +131,6 @@ fun ColumnList() {
 @Composable
 fun DefaultPreview() {
     JetPackTheme {
-        Mainscreen()
+        MainScreen()
     }
 }

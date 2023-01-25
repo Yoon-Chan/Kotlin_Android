@@ -28,7 +28,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MainScreen()
+                    ()
                 }
             }
         }
@@ -53,7 +53,7 @@ fun Modifier.exampleLayout(
 
 
 @Composable
-fun MainScreen() {
+fun () {
 
 
     Box(
@@ -113,6 +113,6 @@ fun ColorBox(modifier: Modifier) {
 @Composable
 fun DefaultPreview() {
     JetPackTheme {
-        MainScreen()
+        ()
     }
 }
