@@ -1,6 +1,7 @@
 package com.example.newsapp
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -107,7 +108,13 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        newsAdapter = NewsAdapter()
+        newsAdapter = NewsAdapter{ url ->
+            startActivity(
+                Intent(this, WebViewActivity::class.java).apply {
+                    putExtra("url", url)
+                }
+            )
+        }
         binding.newsRecyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity)
             adapter = newsAdapter
