@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.inputmethod.EditorInfo
 import android.view.inputmethod.InputMethodManager
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.newsapp.databinding.ActivityMainBinding
 import com.tickaroo.tikxml.TikXml
@@ -50,6 +51,7 @@ class MainActivity : AppCompatActivity() {
 
             // api 호출, 리스트를 변경
             newsService.mainFeed().submitList()
+
         }
 
         binding.politicsChip.setOnClickListener {
@@ -150,6 +152,9 @@ class MainActivity : AppCompatActivity() {
 
                 val list = response.body()?.channel?.items.orEmpty().transfrom()
                 newsAdapter.submitList(list)
+
+
+                binding.notFoundView.isVisible = list.isEmpty()
                 list.forEachIndexed { index, newsModel ->
 
                     Thread {
@@ -178,8 +183,6 @@ class MainActivity : AppCompatActivity() {
                         }
                     }.start()
                 }
-
-
             }
         })
     }

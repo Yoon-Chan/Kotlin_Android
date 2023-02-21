@@ -11,7 +11,6 @@ import com.example.gitrepos.model.User
 class UserAdapter(val onClick : (User) -> Unit) : ListAdapter<User, UserAdapter.ViewHolder>(diffUtil) {
     inner class ViewHolder(private val viewBinding: ItemUserBinding) :
         RecyclerView.ViewHolder(viewBinding.root) {
-
         fun bind(item: User) {
             viewBinding.usernameTextView.text = item.username
             viewBinding.root.setOnClickListener {
