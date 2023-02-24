@@ -6,10 +6,11 @@ import androidx.core.graphics.createBitmap
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chatapp.databinding.ItemChatroomBinding
 import com.example.chatapp.databinding.ItemUserBinding
 
-class UserAdapter : ListAdapter<UserItem, UserAdapter.ViewHolder >(diff) {
-    inner class ViewHolder(private val binding : ItemUserBinding) : RecyclerView.ViewHolder(binding.root){
+class ChatListAdapter : ListAdapter<UserItem, ChatListAdapter.ViewHolder >(diff) {
+    inner class ViewHolder(private val binding : ItemChatroomBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(item: UserItem){
             binding.nicknameTextView.text = item.username
             binding.descriptionTextView.text = item.decription
@@ -30,7 +31,7 @@ class UserAdapter : ListAdapter<UserItem, UserAdapter.ViewHolder >(diff) {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        return ViewHolder(ItemUserBinding.inflate(
+        return ViewHolder(ItemChatroomBinding.inflate(
             LayoutInflater.from(parent.context),
             parent,
             false
