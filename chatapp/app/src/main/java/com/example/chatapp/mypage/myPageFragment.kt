@@ -30,7 +30,7 @@ class myPageFragment : Fragment(R.layout.fragment_mypage) {
             val currentUserItem = it.getValue(UserItem::class.java) ?: return@addOnSuccessListener
 
             binding.usernameEditText.setText(currentUserItem.username)
-            binding.descriptionEditText.setText(currentUserItem.decription)
+            binding.descriptionEditText.setText(currentUserItem.description)
 
         }
 

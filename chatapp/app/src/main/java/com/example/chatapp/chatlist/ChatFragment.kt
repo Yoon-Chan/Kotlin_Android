@@ -1,11 +1,13 @@
 package com.example.chatapp.userlist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chatapp.Key.Companion.DB_CHAT_ROOMS
 import com.example.chatapp.R
+import com.example.chatapp.chatdetail.ChatActivity
 import com.example.chatapp.databinding.FragmentChatlistBinding
 import com.example.chatapp.databinding.FragmentUserlistBinding
 import com.google.firebase.auth.ktx.auth
@@ -25,7 +27,12 @@ class ChatFragment : Fragment(R.layout.fragment_chatlist) {
         binding = FragmentChatlistBinding.bind(view)
 
 
-        val chatListAdapter = ChatListAdapter()
+        val chatListAdapter = ChatListAdapter{chatRoomItem ->
+            val intent = Intent(context, ChatActivity::class.java)
+            intent.putExtra(ChatActivity.EXTRA_CHAT_ROOM_ID, chatRoomItem.chatRoomId)
+            intent.putExtra(ChatActivity.EXTRA_OTHER_USER_ID, chatRoomItem.otherUserId)
+            startActivity(intent)
+        }
         binding.userListRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = chatListAdapter

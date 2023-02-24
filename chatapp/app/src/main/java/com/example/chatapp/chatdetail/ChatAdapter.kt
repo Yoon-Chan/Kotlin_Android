@@ -31,7 +31,7 @@ class ChatAdapter : ListAdapter<ChatItem, ChatAdapter.ViewHolder >(diff) {
                 binding.usernameTextView.isVisible = false
                 binding.usernameTextView.text = "밖에서 넣어주기" //item.userId
                 binding.messageTextView.text = item.message
-                binding.messageTextView.gravity = Gravity.START
+                binding.messageTextView.gravity = Gravity.END
             }
 
         }

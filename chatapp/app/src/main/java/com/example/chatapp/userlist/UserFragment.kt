@@ -1,11 +1,16 @@
 package com.example.chatapp.userlist
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.chatapp.Key.Companion.DB_CHAT_ROOMS
 import com.example.chatapp.Key.Companion.DB_USERS
 import com.example.chatapp.R
+import com.example.chatapp.chatdetail.ChatActivity
+import com.example.chatapp.chatdetail.ChatActivity.Companion.EXTRA_CHAT_ROOM_ID
+import com.example.chatapp.chatdetail.ChatActivity.Companion.EXTRA_OTHER_USER_ID
 import com.example.chatapp.databinding.FragmentUserlistBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -13,6 +18,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.util.UUID
 
 class UserFragment : Fragment(R.layout.fragment_userlist) {
 
@@ -24,7 +30,36 @@ class UserFragment : Fragment(R.layout.fragment_userlist) {
         binding = FragmentUserlistBinding.bind(view)
 
 
-        val userListAdapter = UserAdapter()
+        val userListAdapter = UserAdapter { otherUser ->
+            val myUserId = Firebase.auth.currentUser?.uid ?: ""
+            val chatRoomDB = Firebase.database.reference.child(DB_CHAT_ROOMS).child(myUserId)
+                .child(otherUser.userId ?: "")
+
+            chatRoomDB.get().addOnSuccessListener {
+                var chatRoomId = ""
+                if (it.value != null) {
+                    //데이터가 존재
+                    val chatRoom = it.getValue(ChatListItem::class.java)
+                    chatRoomId = chatRoom?.chatRoomId ?: ""
+                } else {
+                    chatRoomId = UUID.randomUUID().toString()
+                    val newChatRoom = ChatListItem(
+                        chatRoomId = chatRoomId,
+                        otherUserName = otherUser.username,
+                        otherUserId = otherUser.userId,
+                    )
+
+                    chatRoomDB.setValue(newChatRoom)
+                }
+
+                val intent = Intent(context, ChatActivity::class.java)
+                intent.putExtra(EXTRA_CHAT_ROOM_ID, chatRoomId)
+                intent.putExtra(EXTRA_OTHER_USER_ID, otherUser.userId)
+                startActivity(intent)
+
+
+            }
+        }
         binding.userListRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = userListAdapter
@@ -43,9 +78,9 @@ class UserFragment : Fragment(R.layout.fragment_userlist) {
                     val userItemList = mutableListOf<UserItem>()
 
                     snapshot.children.forEach {
-                        val user =it.getValue(UserItem::class.java)
+                        val user = it.getValue(UserItem::class.java)
                         user ?: return
-                        if(user.userId != currentUserId){
+                        if (user.userId != currentUserId) {
                             userItemList.add(user)
                         }
                     }
@@ -54,11 +89,6 @@ class UserFragment : Fragment(R.layout.fragment_userlist) {
                 }
             })
 
-        userListAdapter.submitList(
-            mutableListOf<UserItem>().apply {
-                add(UserItem("11", "22", "33"))
-            }
-        )
     }
 
 }
