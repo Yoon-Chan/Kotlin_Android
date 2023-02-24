@@ -49,7 +49,7 @@ class UserFragment : Fragment(R.layout.fragment_userlist) {
                             userItemList.add(user)
                         }
                     }
-                    
+
                     userListAdapter.submitList(userItemList)
                 }
             })

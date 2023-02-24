@@ -9,22 +9,22 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.chatapp.databinding.ItemChatroomBinding
 import com.example.chatapp.databinding.ItemUserBinding
 
-class ChatListAdapter : ListAdapter<UserItem, ChatListAdapter.ViewHolder >(diff) {
+class ChatListAdapter : ListAdapter<ChatListItem, ChatListAdapter.ViewHolder >(diff) {
     inner class ViewHolder(private val binding : ItemChatroomBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: UserItem){
-            binding.nicknameTextView.text = item.username
-            binding.descriptionTextView.text = item.decription
+        fun bind(item: ChatListItem){
+            binding.nicknameTextView.text = item.otherUserName
+            binding.descriptionTextView.text = item.lastMessage
         }
     }
 
 
     companion object{
-        val diff = object : DiffUtil.ItemCallback<UserItem>(){
-            override fun areContentsTheSame(oldItem: UserItem, newItem: UserItem): Boolean {
+        val diff = object : DiffUtil.ItemCallback<ChatListItem>(){
+            override fun areContentsTheSame(oldItem: ChatListItem, newItem: ChatListItem): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areItemsTheSame(oldItem: UserItem, newItem: UserItem): Boolean {
+            override fun areItemsTheSame(oldItem: ChatListItem, newItem: ChatListItem): Boolean {
                 return oldItem.userId == newItem.userId
             }
         }

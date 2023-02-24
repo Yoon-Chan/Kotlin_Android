@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.chatapp.Key
 import com.example.chatapp.LoginActivity
 import com.example.chatapp.R
 import com.example.chatapp.databinding.FragmentMypageBinding
+import com.example.chatapp.userlist.UserItem
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class myPageFragment : Fragment(R.layout.fragment_mypage) {
@@ -20,6 +23,17 @@ class myPageFragment : Fragment(R.layout.fragment_mypage) {
         binding = FragmentMypageBinding.bind(view)
 
 
+        val currentUserId = Firebase.auth.currentUser?.uid ?: ""
+        val currentUserDB = Firebase.database.reference.child(Key.DB_USERS).child(currentUserId)
+
+        currentUserDB.get().addOnSuccessListener {
+            val currentUserItem = it.getValue(UserItem::class.java) ?: return@addOnSuccessListener
+
+            binding.usernameEditText.setText(currentUserItem.username)
+            binding.descriptionEditText.setText(currentUserItem.decription)
+
+        }
+
         binding.applyButton.setOnClickListener {
             val username = binding.usernameEditText.text.toString()
             val description = binding.descriptionEditText.text.toString()
@@ -30,6 +44,10 @@ class myPageFragment : Fragment(R.layout.fragment_mypage) {
             }
 
 
+            val user = mutableMapOf<String, Any>()
+            user["username"] = username
+            user["description"] = description
+            currentUserDB.updateChildren(user)
             //todo 파이어베이스 realtime database update
 
         }
