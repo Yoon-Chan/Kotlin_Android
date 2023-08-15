@@ -31,6 +31,13 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             .load(homeData.appbarImage)
             .into(binding.appBarImageView)
 
+
+        binding.recommendMenuList.menuLayout.addView(
+            MenuView(context = requireContext()).apply {
+                setTitle("디카페인 카페라떼")
+                setImageUrl("https://picsum.photos/100/100")
+            }
+        )
     }
 }
 
