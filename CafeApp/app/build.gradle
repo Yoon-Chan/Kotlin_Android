@@ -49,4 +49,12 @@ dependencies {
     //내비게이션 프래그먼트 설정
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+
+
+    //gson
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
 }
