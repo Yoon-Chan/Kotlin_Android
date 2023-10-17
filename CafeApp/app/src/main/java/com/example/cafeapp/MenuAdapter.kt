@@ -44,6 +44,4 @@ class MenuAdapter() : ListAdapter<MenuItem, MenuAdapter.ViewHolder>(diffUtil) {
         )
     }
 
-
-
 }

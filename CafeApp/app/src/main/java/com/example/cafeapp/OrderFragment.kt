@@ -1,10 +1,13 @@
 package com.example.cafeapp
 
+import android.icu.lang.UCharacter.VerticalOrientation
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.widget.HorizontalScrollView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.cafeapp.databinding.FragmentOrderBinding
 import kotlin.math.abs
 

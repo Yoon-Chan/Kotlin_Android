@@ -7,5 +7,7 @@
     <string name="recommend_title">%s님을 위한 추천 메뉴</string>
     <string name="foodmenu_title">함께하면 좋은 푸드</string>
     <string name="delivery">DELIVERY</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
