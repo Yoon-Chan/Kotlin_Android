@@ -22,7 +22,7 @@ object RetrofitManager {
 
     private val retrofit = Retrofit.Builder()
         .baseUrl("https://dapi.kakao.com/v2/search/")
-        .addConverterFactory(GsonConverterFactory.create(gson))
+        .addConverterFactory(GsonConverterFactory.create())
         .addCallAdapterFactory(RxJava3CallAdapterFactory.create())
         .client(okHttpClient)
         .build()
