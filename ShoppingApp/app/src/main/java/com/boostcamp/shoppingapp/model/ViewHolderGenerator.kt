@@ -5,6 +5,9 @@ import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.boostcamp.shoppingapp.databinding.ItemEmptyBinding
 import com.boostcamp.shoppingapp.viewholder.BindingViewHolder
+import com.boostcamp.shoppingapp.viewholder.FullAdViewHolder
+import com.boostcamp.shoppingapp.viewholder.HorizontalVIewHolder
+import com.boostcamp.shoppingapp.viewholder.ViewPagerViewHolder
 
 
 //리스트어댑터에 크리에이트 뷰 부분에서 이것을 호출할 건데
@@ -17,6 +20,9 @@ object ViewHolderGenerator {
         viewType: Int
     ) : BindingViewHolder<*>{
         return when(viewType){
+            ViewType.VIEW_PAGER.ordinal -> ViewPagerViewHolder(parent.toBinding())
+            ViewType.HORIZONTAL.ordinal -> HorizontalVIewHolder(parent.toBinding())
+            ViewType.FULL_AD.ordinal -> FullAdViewHolder(parent.toBinding())
             else -> ItemViewHolder(parent.toBinding())
         }
     }
