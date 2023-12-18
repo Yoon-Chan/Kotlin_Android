@@ -2,6 +2,7 @@ package com.boostcamp.shoppingapp.viewholder
 
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
+import com.boostcamp.shoppingapp.BR
 import com.boostcamp.shoppingapp.model.ListItem
 
 abstract class BindingViewHolder<VB : ViewDataBinding>(
