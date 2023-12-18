@@ -1,12 +1,17 @@
 package com.boostcamp.shoppingapp.model
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.viewbinding.ViewBinding
 import com.boostcamp.shoppingapp.databinding.ItemEmptyBinding
 import com.boostcamp.shoppingapp.viewholder.BindingViewHolder
+import com.boostcamp.shoppingapp.viewholder.CouponViewHolder
 import com.boostcamp.shoppingapp.viewholder.FullAdViewHolder
 import com.boostcamp.shoppingapp.viewholder.HorizontalVIewHolder
+import com.boostcamp.shoppingapp.viewholder.ImageViewHolder
+import com.boostcamp.shoppingapp.viewholder.SaleViewHolder
+import com.boostcamp.shoppingapp.viewholder.SellItemViewHolder
 import com.boostcamp.shoppingapp.viewholder.ViewPagerViewHolder
 
 
@@ -18,18 +23,22 @@ object ViewHolderGenerator {
     fun get(
         parent: ViewGroup,
         viewType: Int
-    ) : BindingViewHolder<*>{
-        return when(viewType){
+    ): BindingViewHolder<*> {
+        return when (viewType) {
             ViewType.VIEW_PAGER.ordinal -> ViewPagerViewHolder(parent.toBinding())
             ViewType.HORIZONTAL.ordinal -> HorizontalVIewHolder(parent.toBinding())
             ViewType.FULL_AD.ordinal -> FullAdViewHolder(parent.toBinding())
+            ViewType.COUPON.ordinal -> CouponViewHolder(parent.toBinding())
+            ViewType.IMAGE.ordinal -> ImageViewHolder(parent.toBinding())
+            ViewType.SELL_ITEM.ordinal -> SellItemViewHolder(parent.toBinding())
+            ViewType.SALE.ordinal -> SaleViewHolder(parent.toBinding())
             else -> ItemViewHolder(parent.toBinding())
         }
     }
 
     class ItemViewHolder(binding: ItemEmptyBinding) : BindingViewHolder<ItemEmptyBinding>(binding)
 
-    private inline fun<reified V: ViewBinding> ViewGroup.toBinding() : V {
+    private inline fun <reified V : ViewBinding> ViewGroup.toBinding(): V {
         return V::class.java.getMethod(
             "inflate",
             LayoutInflater::class.java,
