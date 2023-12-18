@@ -1,6 +1,6 @@
 package com.boostcamp.shoppingapp.di
 
-import com.boostcamp.shoppingapp.MainService
+import com.boostcamp.shoppingapp.remote.MainService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

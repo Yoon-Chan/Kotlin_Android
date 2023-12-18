@@ -1,5 +1,7 @@
 package com.boostcamp.shoppingapp.di
 
+import com.boostcamp.shoppingapp.model.ListItem
+import com.boostcamp.shoppingapp.remote.ListItemDeserializer
 import com.google.gson.GsonBuilder
 import dagger.Module
 import dagger.Provides
@@ -19,12 +21,14 @@ object RetrofitModule {
     @Provides
     @Singleton
     fun providesConverterFactory(): GsonConverterFactory {
-        return GsonConverterFactory.create(GsonBuilder().create())
+        return GsonConverterFactory.create(
+            GsonBuilder().registerTypeAdapter(ListItem::class.java, ListItemDeserializer()).create()
+        )
     }
 
     @Provides
     @Singleton
-    fun providesOkHttpClient() : OkHttpClient.Builder {
+    fun providesOkHttpClient(): OkHttpClient.Builder {
         return OkHttpClient.Builder().apply {
             connectTimeout(5, TimeUnit.SECONDS)
             readTimeout(5, TimeUnit.SECONDS)
@@ -37,7 +41,7 @@ object RetrofitModule {
     fun providesRetrofit(
         client: OkHttpClient.Builder,
         gsonConverterFactory: GsonConverterFactory
-    ) : Retrofit {
+    ): Retrofit {
         return Retrofit.Builder()
             .baseUrl("http://192.168.31.16:3030/api/v1/fastcampus/")
             .addConverterFactory(gsonConverterFactory)

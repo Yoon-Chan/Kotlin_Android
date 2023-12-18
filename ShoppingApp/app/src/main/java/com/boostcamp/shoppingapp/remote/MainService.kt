@@ -1,4 +1,4 @@
-package com.boostcamp.shoppingapp
+package com.boostcamp.shoppingapp.remote
 
 import com.boostcamp.shoppingapp.model.NetworkResponse
 import retrofit2.http.GET
