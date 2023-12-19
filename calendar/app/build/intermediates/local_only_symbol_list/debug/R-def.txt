@@ -1,0 +1,24 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color blue
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id calendar_layout
+id calendar_view
+id calendar_year_month_text
+id div
+id tv_day
+id tv_day_of_week
+id view_pager
+layout activity_main
+layout fragment_calendar
+layout item_day_of_week
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Calendar
+style Theme.Calendar
+xml backup_rules
+xml data_extraction_rules

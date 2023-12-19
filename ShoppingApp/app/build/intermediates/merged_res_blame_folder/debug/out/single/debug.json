@@ -1,0 +1,122 @@
+[
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_rectangle_stroke_r5.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/rectangle_stroke_r5.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_sale.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_sale.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_activity_main.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_empty.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_empty.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_viewpager.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_viewpager.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_baseline_search_24.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/baseline_search_24.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_coupon.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_coupon.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_sell_item.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_sell_item.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/xml_data_extraction_rules.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_rectange_primary_r10.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/rectange_primary_r10.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_logo.png.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/logo.png"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/xml_backup_rules.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_full_ad.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_full_ad.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_image.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_image.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/layout_item_horizontal.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_horizontal.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-merged_res-43:/drawable_icon_sale.png.flat",
+        "source": "com.boostcamp.shoppingapp-main-45:/drawable/icon_sale.png"
+    }
+]

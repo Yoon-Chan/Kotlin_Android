@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "com.example.calendar.app-mergeDebugResources-36:/layout/item_day_of_week.xml",
+        "source": "com.example.calendar.app-main-39:/layout/item_day_of_week.xml"
+    },
+    {
+        "merged": "com.example.calendar.app-mergeDebugResources-36:/layout/activity_main.xml",
+        "source": "com.example.calendar.app-main-39:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.calendar.app-mergeDebugResources-36:/layout/fragment_calendar.xml",
+        "source": "com.example.calendar.app-main-39:/layout/fragment_calendar.xml"
+    }
+]

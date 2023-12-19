@@ -1,0 +1,38 @@
+[
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_image.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_image.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_empty.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_empty.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/activity_main.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_sale.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_sale.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_full_ad.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_full_ad.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_coupon.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_coupon.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_sell_item.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_sell_item.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_viewpager.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_viewpager.xml"
+    },
+    {
+        "merged": "com.boostcamp.shoppingapp-mergeDebugResources-42:/layout/item_horizontal.xml",
+        "source": "com.boostcamp.shoppingapp-main-45:/layout/item_horizontal.xml"
+    }
+]

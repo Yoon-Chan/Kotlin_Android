@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.boostcamp.shoppingapp-mergeDebugResources-41:/values-hdpi-v4/values-hdpi-v4.xml",
+            "map": [
+                {
+                    "source": "/Users/chan/.gradle/caches/transforms-3/7311d3a3b7ba2234399be1d233964e6f/transformed/appcompat-1.6.1/res/values-hdpi-v4/values-hdpi-v4.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "6",
+                        "endColumns": "13",
+                        "endOffsets": "327"
+                    }
+                }
+            ]
+        }
+    ]
+}
