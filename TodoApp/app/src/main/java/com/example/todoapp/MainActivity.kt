@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.databinding.ActivityMainBinding
+import com.example.todoapp.model.ContentEntity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private val viewModel: MainViewModel by viewModels()
-    private val adapter by lazy { ItemListAdapter() }
+    private val adapter by lazy { ItemListAdapter(Handler()) }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -43,6 +44,16 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickAdd() {
+        InputActivity.start(this)
+    }
 
+    inner class Handler {
+        fun onClickItem(item : ContentEntity){
+            InputActivity.start(this@MainActivity, item)
+        }
+
+        fun onCheckedItem(item : ContentEntity){
+            viewModel.updateItem(item)
+        }
     }
 }

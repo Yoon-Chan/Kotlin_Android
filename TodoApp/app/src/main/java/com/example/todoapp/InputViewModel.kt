@@ -20,14 +20,21 @@ class InputViewModel @Inject constructor(
     val doneEvent: LiveData<Unit> = _doneEvent
 
 
-    var content = MutableLiveData<String>()
-    var memo = MutableLiveData<String?>()
+    val content = MutableLiveData<String>()
+    val memo = MutableLiveData<String?>()
+    var item : ContentEntity? = null
 
+    fun initData(item : ContentEntity){
+        this.item = item
+        content.value = item.content
+        memo.value = item.memo
+    }
 
     fun insertData(){
         content.value?.let { content ->
             viewModelScope.launch(Dispatchers.IO) {
                 contentRepository.insert(
+                    item?.copy(content = content, memo = memo.value) ?:
                     ContentEntity(content = content, memo = memo.value)
                 )
             }

@@ -15,4 +15,6 @@ interface ContentDao {
 
     @Query("SELECT * FROM Content")
     fun selectAll() : Flow<List<ContentEntity>>
+
+
 }

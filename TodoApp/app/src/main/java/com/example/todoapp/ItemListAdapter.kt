@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.example.todoapp.databinding.ItemContentBinding
 import com.example.todoapp.model.ContentEntity
 
-class ItemListAdapter : ListAdapter<ContentEntity, ContentViewHolder>(diffUtil) {
+class ItemListAdapter(private val handler : MainActivity.Handler) : ListAdapter<ContentEntity, ContentViewHolder>(diffUtil) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ContentViewHolder {
@@ -16,7 +16,8 @@ class ItemListAdapter : ListAdapter<ContentEntity, ContentViewHolder>(diffUtil) 
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ),
+            handler
         )
     }
 
