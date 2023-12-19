@@ -26,4 +26,23 @@ https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/38bdf4a5-0a45-4a49-9
 
 ---
 
+# Todo 앱
++ Room을 이용하여 할 일을 생성, 수정, 삭제, 업데이트 기능을 하도록 구현했습니다.
++ 체크 클릭시 완료 표시, 플로팅 버튼 클릭 시 할 일 생서 화현으로 이동
++ 일정 클릭시 일정 수정 화면으로 이동
++ 일정을 길게 누르면 삭제하도록 구현
+
+### 사용 기능
++ Room
++ Flow
++ Hilt
++ MVVM 패턴
+
+### 기능 정리
+노션  : https://www.notion.so/Room-Todo-7183f5d7656847e7b2b52930b2614d6d
+
+
+__실행 결과__
+
+https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/a83db498-47fe-427d-bb10-93e4063fba9a
 
