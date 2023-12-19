@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
+        <variable
+            name="item"
+            type="com.boostcamp.shoppingapp.model.Horizontal" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wr">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/titleTextView"
