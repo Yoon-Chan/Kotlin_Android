@@ -2,6 +2,7 @@ package com.example.todoapp.repository
 
 import com.example.todoapp.data.dao.ContentDao
 import com.example.todoapp.model.ContentEntity
+import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
 class ContentRepositoryImpl @Inject constructor(
@@ -10,5 +11,10 @@ class ContentRepositoryImpl @Inject constructor(
 
     override suspend fun insert(item: ContentEntity) {
         contentDao.insert(item)
+    }
+
+
+    override fun loadList(): Flow<List<ContentEntity>> {
+        return contentDao.selectAll()
     }
 }

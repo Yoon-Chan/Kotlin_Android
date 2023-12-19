@@ -1,21 +1,21 @@
 package com.example.todoapp.di
 
-import com.example.todoapp.data.dao.ContentDao
+import com.example.todoapp.repository.ContentRepository
 import com.example.todoapp.repository.ContentRepositoryImpl
+import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
-import dagger.hilt.android.components.ViewModelComponent
+import dagger.hilt.components.SingletonComponent
 import javax.inject.Singleton
 
 
 @Module
-@InstallIn(ViewModelComponent::class)
-object RepositoryModule {
+@InstallIn(SingletonComponent::class)
+abstract class RepositoryModule {
 
-    @Provides
+    @Binds
     @Singleton
-    fun providesRepository(
-        contentDao: ContentDao
-    ) = ContentRepositoryImpl(contentDao)
+    abstract fun bindsRepository(
+        contentRepositoryImpl: ContentRepositoryImpl
+    ) : ContentRepository
 }
