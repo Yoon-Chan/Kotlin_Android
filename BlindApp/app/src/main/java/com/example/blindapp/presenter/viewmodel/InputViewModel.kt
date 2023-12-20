@@ -49,7 +49,7 @@ class InputViewModel @Inject constructor(
                 item?.copy(category = categoryValue, title = titleValue, content = contentValue)
                     ?: Content(category = categoryValue, title = titleValue, content = contentValue)
             ).also {
-                _doneEvent.postValue(Pair(true, if (it) "완료" else "저장 할 수 없습니다."))햐
+                _doneEvent.postValue(Pair(true, if (it) "완료" else "저장 할 수 없습니다."))
             }
         }
     }
