@@ -1,6 +1,7 @@
 package com.example.blindapp.di
 
 import com.example.blindapp.data.repository.ContentRepositoryImpl
+import com.example.blindapp.data.source.local.dao.ContentDao
 import com.example.blindapp.data.source.remote.api.ContentService
 import dagger.Module
 import dagger.Provides
@@ -15,6 +16,7 @@ object RepositoryModule {
     @Provides
     @ViewModelScoped
     fun providesContentRepository(
-        contentService: ContentService
-    ) = ContentRepositoryImpl(contentService)
+        contentService: ContentService,
+        contentDao: ContentDao
+    ) = ContentRepositoryImpl(contentService, contentDao)
 }
