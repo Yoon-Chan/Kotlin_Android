@@ -26,12 +26,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun onClickAdd() {
-
+        InputActivity.start(this)
     }
 
     inner class Handler {
         fun onClickItem(item: Content) {
-
+            InputActivity.start(this@MainActivity, item)
         }
 
         fun onLongClick(item: Content): Boolean {
