@@ -4,15 +4,21 @@ import android.Manifest
 import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
+import android.os.Build
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.activity.ComponentActivity
+import androidx.annotation.RequiresApi
 import androidx.camera.core.CameraSelector
+import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
+import com.example.face_regognition.recognition.FaceAnalyzer
+import com.example.face_regognition.recognition.FaceAnalyzerListener
 import com.google.common.util.concurrent.ListenableFuture
 import java.util.concurrent.Executors
 
@@ -36,7 +42,7 @@ class Camera(private val context: Context) : ActivityCompat.OnRequestPermissions
     private lateinit var cameraProviderFuture: ListenableFuture<ProcessCameraProvider>
 
     private var cameraExecutor = Executors.newSingleThreadExecutor()
-
+    private var listener : FaceAnalyzerListener? = null
 
     fun permissionCheck(context: Context){
         val permissionList = listOf(Manifest.permission.CAMERA)
@@ -47,7 +53,8 @@ class Camera(private val context: Context) : ActivityCompat.OnRequestPermissions
             openPreview()
         }
     }
-    fun initCamera(layout: ViewGroup) {
+    fun initCamera(layout: ViewGroup, listener: FaceAnalyzerListener) {
+        this.listener = listener
         previewView = PreviewView(context)
         layout.addView(previewView)
         permissionCheck(context)
@@ -57,7 +64,7 @@ class Camera(private val context: Context) : ActivityCompat.OnRequestPermissions
         cameraProviderFuture = ProcessCameraProvider.getInstance(context)
             .also { providerFuture ->
                 providerFuture.addListener({
-
+                    startPreview(context)
                 }, ContextCompat.getMainExecutor(context))
             }
     }
@@ -73,6 +80,37 @@ class Camera(private val context: Context) : ActivityCompat.OnRequestPermissions
             )
         } catch (e: Exception) {
             e.printStackTrace()
+        }
+    }
+
+    fun startFaceDetect(){
+        val cameraProvider = cameraProviderFuture.get()
+        val faceAnalyzer = FaceAnalyzer((context as ComponentActivity).lifecycle, previewView, listener)
+        val analysisUseCase = ImageAnalysis.Builder()
+            .build()
+            .also {
+                it.setAnalyzer(cameraExecutor, faceAnalyzer)
+            }
+
+        try {
+            cameraProvider.bindToLifecycle(
+                context as LifecycleOwner,
+                cameraSelector,
+                preview,
+                analysisUseCase
+            )
+        }catch (e: Exception) {
+
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    fun stopFaceDetect() {
+        try {
+            cameraProviderFuture.get().unbindAll()
+            previewView.releasePointerCapture()
+        }catch (e: Exception){
+
         }
     }
 
