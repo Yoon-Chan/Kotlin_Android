@@ -49,6 +49,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:paddingHorizontal="48dp"
+                    android:onClick="@{() -> view.onClickDone()}"
                     android:text="입력 완료"
                     android:visibility="gone"
                     tools:visibility="visible" />
