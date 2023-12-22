@@ -46,3 +46,23 @@ __실행 결과__
 
 https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/a83db498-47fe-427d-bb10-93e4063fba9a
 
+---
+
+# 얼굴 인식 기능 구현
++ ml-kit을 이용하여 얼굴 인식하기
++ camerax 라이브러리를 이용하여 카메라 기능 사용
++ 각 상황에 맞는 얼굴 인식 성공하기
+
+### 사용 기술
++ Modlue
++ ml-kit 얼굴 인식 라이브러리
++ cameraX 라이브러리
++ CustomView
+
+### 기능 정리
++ 노션 : https://www.notion.so/265c0d728f564113983fae6f9663ac18
+
+__실행 결과__
+
+https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/715b67b1-6079-48b1-86fa-404324c7c342
+
