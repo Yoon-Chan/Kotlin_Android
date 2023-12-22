@@ -49,6 +49,7 @@ class PinViewModel : ViewModel() {
     private fun validPin() : Boolean{
         if(password.length < 6){
             _messageLiveDate.value = "비밀번호 6자리를 입력해주세요."
+            reset()
             return false
         }
 
