@@ -1,5 +1,6 @@
 package com.example.securityapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.inputmethod.EditorInfo
 import androidx.appcompat.app.AppCompatActivity
@@ -130,6 +131,7 @@ class IdentityInputActivity : AppCompatActivity() {
             return
         }
 
+        startActivity(Intent(this, VerifyOtpActivity::class.java))
     }
 
     companion object {
