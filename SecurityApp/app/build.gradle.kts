@@ -53,4 +53,7 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("androidx.activity:activity-ktx:1.8.2")
+
+    //smsRetriver
+    implementation("com.google.android.gms:play-services-auth-api-phone:18.0.1")
 }
