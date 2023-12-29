@@ -9,8 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.youtubeapp.databinding.ItemVideoBinding
 
-class VideoAdapter(private val context: Context, private val onClick: (VideoItem) -> Unit) :
-    ListAdapter<VideoItem, VideoAdapter.ViewHolder>(diffUtil) {
+class VideoAdapter(private val context: Context, private val onClick: (VideoEntity) -> Unit) :
+    ListAdapter<VideoEntity, VideoAdapter.ViewHolder>(diffUtil) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.onBind(currentList[position])
@@ -27,9 +27,9 @@ class VideoAdapter(private val context: Context, private val onClick: (VideoItem
         )
     }
 
-    inner class ViewHolder(private val binding: ItemVideoBinding, private val onClick: (VideoItem) -> Unit) :
+    inner class ViewHolder(private val binding: ItemVideoBinding, private val onClick: (VideoEntity) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(item: VideoItem) {
+        fun onBind(item: VideoEntity) {
             binding.titleTextView.text = item.title
             binding.subTitleTextView.text =
                 context.getString(R.string.sub_title, item.title, item.viewCount, item.dateText)
@@ -51,12 +51,12 @@ class VideoAdapter(private val context: Context, private val onClick: (VideoItem
     }
 
     companion object {
-        val diffUtil = object : DiffUtil.ItemCallback<VideoItem>() {
-            override fun areItemsTheSame(oldItem: VideoItem, newItem: VideoItem): Boolean {
+        val diffUtil = object : DiffUtil.ItemCallback<VideoEntity>() {
+            override fun areItemsTheSame(oldItem: VideoEntity, newItem: VideoEntity): Boolean {
                 return oldItem == newItem
             }
 
-            override fun areContentsTheSame(oldItem: VideoItem, newItem: VideoItem): Boolean {
+            override fun areContentsTheSame(oldItem: VideoEntity, newItem: VideoEntity): Boolean {
                 return oldItem.id == newItem.id
             }
         }

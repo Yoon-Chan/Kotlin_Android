@@ -9,6 +9,8 @@ import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
 import com.example.youtubeapp.Util.readData
 import com.example.youtubeapp.databinding.ActivityMainBinding
+import com.example.youtubeapp.player.PlayerHeader
+import com.example.youtubeapp.player.transform
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,8 +38,6 @@ class MainActivity : AppCompatActivity() {
             player?.pause()
         }
 
-        videoAdapter.submitList(videoList.videos)
-        playerVideoAdapter.submitList(videoList.videos)
     }
 
 
@@ -54,23 +54,49 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initVideoRecyclerView() {
-        videoAdapter = VideoAdapter(this) { videoItem ->
+        videoAdapter = VideoAdapter(this) { videoEntity ->
             binding.motionLayout.setTransition(R.id.collapse, R.id.expand)
             binding.motionLayout.transitionToEnd()
-            val list = listOf(videoItem) + videoList.videos.filter { it.id != videoItem.id }
-            playerVideoAdapter.submitList(list)
-            play(videoItem)
+
+            val headerModel = PlayerHeader(
+                id = "H${videoEntity.id}",
+                title = videoEntity.title,
+                channelThumb = videoEntity.channelThumb,
+                channelName = videoEntity.channelName,
+                viewCount = videoEntity.viewCount,
+                dateText = videoEntity.dateText
+            )
+            val list = listOf(headerModel) + videoList.videos.filter { it.id != videoEntity.id }
+                .map { it.transform() }
+            playerVideoAdapter.submitList(list) {
+                binding.playerRecyclerView.scrollToPosition(0)
+            }
+            play(videoEntity.videoUrl, videoEntity.title)
         }
         binding.videoListRecyclerView.adapter = videoAdapter
+        videoAdapter.submitList(videoList.videos)
     }
 
     private fun initPlayerVideoRecyclerView() {
-        playerVideoAdapter = PlayerVideoAdapter(this){ videoItem ->
-            val list = listOf(videoItem) + videoList.videos.filter { it.id != videoItem.id }
-            playerVideoAdapter.submitList(list)
-            play(videoItem)
+        playerVideoAdapter = PlayerVideoAdapter(this) { playerVideo ->
+            val headerModel = PlayerHeader(
+                id = "H${playerVideo.id}",
+                title = playerVideo.title,
+                channelThumb = playerVideo.channelThumb,
+                channelName = playerVideo.channelName,
+                viewCount = playerVideo.viewCount,
+                dateText = playerVideo.dateText
+            )
+            val list = listOf(headerModel) + videoList.videos.filter { it.id != playerVideo.id }
+                .map { it.transform() }
+
+            playerVideoAdapter.submitList(list) {
+                binding.playerRecyclerView.scrollToPosition(0)
+            }
+            play(playerVideo.videoUrl, playerVideo.title)
         }
         binding.playerRecyclerView.adapter = playerVideoAdapter
+        binding.playerRecyclerView.itemAnimator = null
     }
 
     private fun initMotionLayout() {
@@ -112,14 +138,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        if(player == null){
+        if (player == null) {
             initExoPlayer()
         }
     }
 
     override fun onResume() {
         super.onResume()
-        if(player == null){
+        if (player == null) {
             initExoPlayer()
         }
     }
@@ -137,14 +163,14 @@ class MainActivity : AppCompatActivity() {
     private fun initExoPlayer() {
         player = ExoPlayer.Builder(this)
             .build()
-            .also {exoPlayer ->
+            .also { exoPlayer ->
                 binding.playerView.player = exoPlayer
                 binding.playerView.useController = false
                 exoPlayer.addListener(object : Player.Listener {
                     override fun onIsPlayingChanged(isPlaying: Boolean) {
                         super.onIsPlayingChanged(isPlaying)
 
-                        if(isPlaying){
+                        if (isPlaying) {
                             binding.controlButton.setImageResource(R.drawable.baseline_pause_24)
                         } else {
                             binding.controlButton.setImageResource(R.drawable.baseline_play_arrow_24)
@@ -154,11 +180,11 @@ class MainActivity : AppCompatActivity() {
             }
     }
 
-    private fun play(videoItem: VideoItem){
-        player?.setMediaItem(MediaItem.fromUri(Uri.parse(videoItem.videoUrl)))
+    private fun play(videoUrl: String, videoTitle: String) {
+        player?.setMediaItem(MediaItem.fromUri(Uri.parse(videoUrl)))
         player?.prepare()
         player?.play()
 
-        binding.videoTitleTextView.text = videoItem.title
+        binding.videoTitleTextView.text = videoTitle
     }
 }
