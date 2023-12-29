@@ -71,7 +71,8 @@
         app:layout_constraintBottom_toBottomOf="@id/videoPlayerContainer"
         app:layout_constraintEnd_toEndOf="@id/videoPlayerContainer"
         app:layout_constraintStart_toStartOf="@id/videoPlayerContainer"
-        app:layout_constraintTop_toTopOf="@id/videoPlayerContainer" />
+        app:layout_constraintTop_toTopOf="@id/videoPlayerContainer"
+        app:resize_mode="fixed_width" />
 
 
     <TextView
@@ -107,7 +108,7 @@
         android:padding="10dp"
         android:src="@drawable/baseline_clear_24"
         app:layout_constraintBottom_toBottomOf="@id/videoPlayerContainer"
-        app:layout_constraintEnd_toEndOf="@id/videoPlayerContainer"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/videoPlayerContainer" />
 
     <FrameLayout
