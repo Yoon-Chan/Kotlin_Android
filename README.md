@@ -66,3 +66,26 @@ __실행 결과__
 
 https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/715b67b1-6079-48b1-86fa-404324c7c342
 
+---
+
+# Youtube 앱
++ youtube처럼 영상 실행하고, 화면을 내리면 아래에 화면이 나타나는 기능 구현
+
+### 사용 기능
++ ExoPlayer
++ MotionLayout
++ touchEvent
++ ViewBinding
+
+### 기능 정리
+노션 : https://www.notion.so/26541e39daf64a5fa7f29bc2308af59f
+
+__실행 결과__
+
+https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/0a93ad37-896a-40b1-909f-e83d1f1c1830
+
+
+#### 애니메이션
+
+https://github.com/Yoon-Chan/Kotlin_Android/assets/56026214/732fcb15-b48b-439c-b3ce-90a36c89dfcd
+
