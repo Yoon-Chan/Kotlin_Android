@@ -15,12 +15,19 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        videoAdapter = VideoAdapter(this)
+        videoAdapter = VideoAdapter(this) {videoItem ->
+            binding.motionLayout.setTransition(R.id.collapse, R.id.expand)
+            binding.motionLayout.transitionToEnd()
+        }
+        binding.motionLayout.jumpToState(R.id.collapse)
+
         binding.videoListRecyclerView.adapter = videoAdapter
 
         val videoList = readData("videos.json", VideoList::class.java) ?: VideoList(
             emptyList()
         )
         videoAdapter.submitList(videoList.videos)
+
+
     }
 }

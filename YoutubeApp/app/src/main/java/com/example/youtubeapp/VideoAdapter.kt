@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.youtubeapp.databinding.ItemVideoBinding
 
-class VideoAdapter(private val context: Context) :
+class VideoAdapter(private val context: Context, private val onClick: (VideoItem) -> Unit) :
     ListAdapter<VideoItem, VideoAdapter.ViewHolder>(diffUtil) {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -22,11 +22,12 @@ class VideoAdapter(private val context: Context) :
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ),
+            onClick
         )
     }
 
-    inner class ViewHolder(private val binding: ItemVideoBinding) :
+    inner class ViewHolder(private val binding: ItemVideoBinding, private val onClick: (VideoItem) -> Unit) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(item: VideoItem) {
             binding.titleTextView.text = item.title
@@ -42,6 +43,10 @@ class VideoAdapter(private val context: Context) :
                 .load(item.channelThumb)
                 .circleCrop()
                 .into(binding.channelLogImageView)
+
+            binding.root.setOnClickListener {
+                onClick(item)
+            }
         }
     }
 
