@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">YoutubeApp</string>
     <string name="sub_title">%s • 조회수 %s • %s</string>
+    <string name="header_sub_title">조회수 %s • %s</string>
 </resources>

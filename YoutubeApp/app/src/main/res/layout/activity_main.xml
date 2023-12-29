@@ -72,6 +72,7 @@
         app:layout_constraintEnd_toEndOf="@id/videoPlayerContainer"
         app:layout_constraintStart_toStartOf="@id/videoPlayerContainer"
         app:layout_constraintTop_toTopOf="@id/videoPlayerContainer"
+        app:controller_layout_id="@layout/layout_youtube_player_control"
         app:resize_mode="fixed_width" />
 
 
@@ -125,6 +126,7 @@
         android:id="@+id/playerRecyclerView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/recyclerViewContainer"
         app:layout_constraintEnd_toEndOf="@id/recyclerViewContainer"
         app:layout_constraintStart_toStartOf="@id/recyclerViewContainer"

@@ -14,7 +14,14 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var videoAdapter: VideoAdapter
+    private lateinit var playerVideoAdapter: PlayerVideoAdapter
     private var player: ExoPlayer? = null
+    private val videoList by lazy {
+        readData("videos.json", VideoList::class.java) ?: VideoList(
+            emptyList()
+        )
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,12 +29,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         initMotionLayout()
         initVideoRecyclerView()
+        initPlayerVideoRecyclerView()
         initControl()
         binding.hideButton.setOnClickListener {
             binding.motionLayout.transitionToState(R.id.hide, 300)
             player?.pause()
         }
+
+        videoAdapter.submitList(videoList.videos)
+        playerVideoAdapter.submitList(videoList.videos)
     }
+
 
     private fun initControl() {
         binding.controlButton.setOnClickListener {
@@ -45,14 +57,20 @@ class MainActivity : AppCompatActivity() {
         videoAdapter = VideoAdapter(this) { videoItem ->
             binding.motionLayout.setTransition(R.id.collapse, R.id.expand)
             binding.motionLayout.transitionToEnd()
+            val list = listOf(videoItem) + videoList.videos.filter { it.id != videoItem.id }
+            playerVideoAdapter.submitList(list)
             play(videoItem)
         }
         binding.videoListRecyclerView.adapter = videoAdapter
+    }
 
-        val videoList = readData("videos.json", VideoList::class.java) ?: VideoList(
-            emptyList()
-        )
-        videoAdapter.submitList(videoList.videos)
+    private fun initPlayerVideoRecyclerView() {
+        playerVideoAdapter = PlayerVideoAdapter(this){ videoItem ->
+            val list = listOf(videoItem) + videoList.videos.filter { it.id != videoItem.id }
+            playerVideoAdapter.submitList(list)
+            play(videoItem)
+        }
+        binding.playerRecyclerView.adapter = playerVideoAdapter
     }
 
     private fun initMotionLayout() {
